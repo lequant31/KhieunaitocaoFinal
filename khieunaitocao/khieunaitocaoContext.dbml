@@ -1,0 +1,1968 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="khieunaitocao" Class="khieunaitocaoContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=khieunaitocao;Persist Security Info=True;User ID=sa" SettingsObjectName="khieunaitocao.Properties.Settings" SettingsPropertyName="khieunaitocaoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.clonebidon" Member="clonebidons">
+    <Type Name="clonebidon">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hoten_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="nghe_nghiep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_thongtintocao" Member="tb_thongtintocaos">
+    <Type Name="tb_thongtintocao">
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hinhthuc_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="tocao_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_conoidung_khieunai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_nhieunoidung_linhvuc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="xuly_tocao_khongthuoc_thamquyen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="chuyentocao_chodonvingoai" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="duoc_nhanketqua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duoc_baove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yeucaukhac" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="tb_thongtintocao_tb_bidon_tocao" Member="tb_bidon_tocaos" ThisKey="id_thongtintocao1" OtherKey="id_thongtintocao" Type="tb_bidon_tocao" />
+      <Association Name="tb_thongtintocao_tb_giaiquyettocao" Member="tb_giaiquyettocaos" ThisKey="id_thongtintocao1" OtherKey="id_thongtintocao" Type="tb_giaiquyettocao" />
+      <Association Name="tb_thongtintocao_tb_nhatky_guidon_tocao" Member="tb_nhatky_guidon_tocaos" ThisKey="id_thongtintocao1" OtherKey="id_thongtintocao" Type="tb_nhatky_guidon_tocao" />
+      <Association Name="tb_donvi_tb_thongtintocao" Member="tb_donvi" ThisKey="ma_donvi" OtherKey="ma_donvi" Type="tb_donvi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clonebidontocao" Member="clonebidontocaos">
+    <Type Name="clonebidontocao">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hoten_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="nghe_nghiep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clonenhatkyguidon" Member="clonenhatkyguidons">
+    <Type Name="clonenhatkyguidon">
+      <Column Name="id_nhatky_guidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_vietdon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_nhandon_bandau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="canbo_tiepnhan_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="coquan_chuyenden" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_bandau_cua_donthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hinhthuc_tiepnhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_tiepnhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clonenhatkyguidontocao" Member="clonenhatkyguidontocaos">
+    <Type Name="clonenhatkyguidontocao">
+      <Column Name="id_nhatky_guidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan_dontocao_bandau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="canbo_tiepnhan_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="coquan_chuyenden" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_bandau_cua_donthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hinhthuc_tiepnhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_tiepnhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.cloneThongtinkhieunai" Member="cloneThongtinkhieunais">
+    <Type Name="cloneThongtinkhieunai">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chuky_nhieunguoi_motnguoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khieunai_conoidung_tocao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.clonethongtintocao" Member="clonethongtintocaos">
+    <Type Name="clonethongtintocao">
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hinhthuc_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="tocao_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_conoidung_khieunai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_nhieunoidung_linhvuc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="xuly_tocao_khongthuoc_thamquyen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="chuyentocao_chodonvingoai" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="duoc_nhanketqua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duoc_baove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yeucaukhac" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_bidon" Member="tb_bidons">
+    <Type Name="tb_bidon">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hoten_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="nghe_nghiep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tb_thongtinkhieunai_tb_bidon" Member="tb_thongtinkhieunai" ThisKey="id_thongtinkhieunai" OtherKey="id_thongtinhieunai" Type="tb_thongtinkhieunai" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_bidon_tocao" Member="tb_bidon_tocaos">
+    <Type Name="tb_bidon_tocao">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hoten_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="nghe_nghiep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Association Name="tb_thongtintocao_tb_bidon_tocao" Member="tb_thongtintocao" ThisKey="id_thongtintocao" OtherKey="id_thongtintocao1" Type="tb_thongtintocao" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_canbochiensy" Member="tb_canbochiensies">
+    <Type Name="tb_canbochiensy">
+      <Column Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_dangnhap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="matkhau_dangnhap" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quyenhan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tb_donvi_tb_canbochiensy" Member="tb_donvi" ThisKey="ma_donvi_tb_donvi" OtherKey="ma_donvi" Type="tb_donvi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_capgiaiquyet" Member="tb_capgiaiquyets">
+    <Type Name="tb_capgiaiquyet">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_donvi" Member="tb_donvis">
+    <Type Name="tb_donvi">
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tb_donvi_tb_thongtintocao" Member="tb_thongtintocaos" ThisKey="ma_donvi" OtherKey="ma_donvi" Type="tb_thongtintocao" />
+      <Association Name="tb_donvi_tb_canbochiensy" Member="tb_canbochiensies" ThisKey="ma_donvi" OtherKey="ma_donvi_tb_donvi" Type="tb_canbochiensy" />
+      <Association Name="tb_donvi_tb_thongtinkhieunai" Member="tb_thongtinkhieunais" ThisKey="ma_donvi" OtherKey="ma_donvi_nhapdulieu" Type="tb_thongtinkhieunai" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_dvchiutrachnhiemgiaiquyet" Member="tb_dvchiutrachnhiemgiaiquyets">
+    <Type Name="tb_dvchiutrachnhiemgiaiquyet">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="donvichiutrachnhiemgiaiquyet" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_giaiquyetkhieunai" Member="tb_giaiquyetkhieunais">
+    <Type Name="tb_giaiquyetkhieunai">
+      <Column Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_donvinhan" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_khoitao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tb_thongtinkhieunai_tb_giaiquyetkhieunai" Member="tb_thongtinkhieunai" ThisKey="id_thongtinkhieunai" OtherKey="id_thongtinhieunai" Type="tb_thongtinkhieunai" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_giaiquyettocao" Member="tb_giaiquyettocaos">
+    <Type Name="tb_giaiquyettocao">
+      <Column Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thuly" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaykhoitao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="tb_thongtintocao_tb_giaiquyettocao" Member="tb_thongtintocao" ThisKey="id_thongtintocao" OtherKey="id_thongtintocao1" Type="tb_thongtintocao" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_nhatky_guidon" Member="tb_nhatky_guidons">
+    <Type Name="tb_nhatky_guidon">
+      <Column Name="id_nhatky_guidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_vietdon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_nhandon_bandau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="canbo_tiepnhan_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="coquan_chuyenden" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_bandau_cua_donthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hinhthuc_tiepnhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_tiepnhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="tb_thongtinkhieunai_tb_nhatky_guidon" Member="tb_thongtinkhieunai" ThisKey="id_thongtinkhieunai" OtherKey="id_thongtinhieunai" Type="tb_thongtinkhieunai" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_nhatky_guidon_tocao" Member="tb_nhatky_guidon_tocaos">
+    <Type Name="tb_nhatky_guidon_tocao">
+      <Column Name="id_nhatky_guidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan_dontocao_bandau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="canbo_tiepnhan_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="coquan_chuyenden" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_bandau_cua_donthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hinhthuc_tiepnhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_tiepnhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="tb_thongtintocao_tb_nhatky_guidon_tocao" Member="tb_thongtintocao" ThisKey="id_thongtintocao" OtherKey="id_thongtintocao1" Type="tb_thongtintocao" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_phanloai_khieunai" Member="tb_phanloai_khieunais">
+    <Type Name="tb_phanloai_khieunai">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="parent_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="phanloai_khieunai" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_phanloai_tocao" Member="tb_phanloai_tocaos">
+    <Type Name="tb_phanloai_tocao">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="parent_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="phanloai_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_status_sua_xoa_donthukhieunai" Member="tb_status_sua_xoa_donthukhieunais">
+    <Type Name="tb_status_sua_xoa_donthukhieunai">
+      <Column Name="id_trangthai_donthukhieunai" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="tb_thongtinkhieunai_tb_status_sua_xoa_donthukhieunai" Member="tb_thongtinkhieunai" ThisKey="id_thongtinkhieunai" OtherKey="id_thongtinhieunai" Type="tb_thongtinkhieunai" IsForeignKey="true" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_temple_hinhthuc_xuly" Member="tb_temple_hinhthuc_xulies">
+    <Type Name="tb_temple_hinhthuc_xuly">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Forward" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Direct handling]" Member="Direct_handling" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Untreated" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_temple_statuss" Member="tb_temple_statusses">
+    <Type Name="tb_temple_statuss">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Finish" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Processing" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Out of date]" Member="Out_of_date" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[No process]" Member="No_process" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_test" Member="tb_tests">
+    <Type Name="tb_test">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hoten_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="nghe_nghiep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tb_thongtinkhieunai" Member="tb_thongtinkhieunais">
+    <Type Name="tb_thongtinkhieunai">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chuky_nhieunguoi_motnguoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khieunai_conoidung_tocao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="tb_thongtinkhieunai_tb_bidon" Member="tb_bidons" ThisKey="id_thongtinhieunai" OtherKey="id_thongtinkhieunai" Type="tb_bidon" />
+      <Association Name="tb_thongtinkhieunai_tb_giaiquyetkhieunai" Member="tb_giaiquyetkhieunais" ThisKey="id_thongtinhieunai" OtherKey="id_thongtinkhieunai" Type="tb_giaiquyetkhieunai" />
+      <Association Name="tb_thongtinkhieunai_tb_nhatky_guidon" Member="tb_nhatky_guidons" ThisKey="id_thongtinhieunai" OtherKey="id_thongtinkhieunai" Type="tb_nhatky_guidon" />
+      <Association Name="tb_thongtinkhieunai_tb_status_sua_xoa_donthukhieunai" Member="tb_status_sua_xoa_donthukhieunais" ThisKey="id_thongtinhieunai" OtherKey="id_thongtinkhieunai" Type="tb_status_sua_xoa_donthukhieunai" />
+      <Association Name="tb_donvi_tb_thongtinkhieunai" Member="tb_donvi" ThisKey="ma_donvi_nhapdulieu" OtherKey="ma_donvi" Type="tb_donvi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.[_bidon_canchuyen]" Method="_bidon_canchuyen">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="_bidon_canchuyenResult">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="hoten_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="nghe_nghiep" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xoacanbo" Method="xoacanbo">
+    <Parameter Name="ma_canbo" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.[_thongtinkhieunai_canchuyen]" Method="_thongtinkhieunai_canchuyen">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="_thongtinkhieunai_canchuyenResult">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chuky_nhieunguoi_motnguoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khieunai_conoidung_tocao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.bieudo_cot_donthukhieunai" Method="bieudo_cot_donthukhieunai">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="bieudo_cot_donthukhieunaiResult">
+      <Column Name="tong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.bieudo_cot_donthutocao" Method="bieudo_cot_donthutocao">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="bieudo_cot_donthutocaoResult">
+      <Column Name="tong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thang" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_chuyendonthu" Method="check_chuyendonthu">
+    <Parameter Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_chuyendonthuResult">
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_ketthucgiaiquyet" Method="check_ketthucgiaiquyet">
+    <Parameter Name="id_quatrinhgiaiquyet" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_ketthucgiaiquyetResult">
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_ketthucgiaiquyettocao" Method="check_ketthucgiaiquyettocao">
+    <Parameter Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_ketthucgiaiquyettocaoResult">
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_madonthu_linq" Method="check_madonthu_linq">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.check_madonthutocao_linq" Method="check_madonthutocao_linq">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.check_matocao_linq" Method="check_matocao_linq">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.check_solangiaiquyet" Method="check_solangiaiquyet">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="madonthu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="solan" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="check_solangiaiquyetResult">
+      <Column Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_update_insert" Method="check_update_insert">
+    <Parameter Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten_dangnhap" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="check_update_insertResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_update_insert_lnq" Method="check_update_insert_lnq">
+    <Parameter Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten_dangnhap" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.check_update_insert_quatrinhgiaiquyetkhieunai_linq" Method="check_update_insert_quatrinhgiaiquyetkhieunai_linq">
+    <Parameter Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.chuyendonthukhieunai" Method="chuyendonthukhieunai">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.chuyendonthutocao" Method="chuyendonthutocao">
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.delete_null_nhatky_bidon" Method="delete_null_nhatky_bidon" IsComposable="true">
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.dinhdanh_canbo" Method="dinhdanh_canbo">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tendangnhap" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="dinhdanh_canboResult">
+      <Column Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_dangnhap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="matkhau_dangnhap" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quyenhan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.get_donvinhan" Method="get_donvinhan">
+    <Parameter Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="get_donvinhanResult">
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_donvi" Method="list_donvi">
+    <ElementType Name="list_donviResult">
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_phanloai_khieunai" Method="list_phanloai_khieunai">
+    <ElementType Name="list_phanloai_khieunaiResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parent_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="phanloai_khieunai" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_phanloai_tocao" Method="list_phanloai_tocao">
+    <ElementType Name="list_phanloai_tocaoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="parent_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="phanloai_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_thongtincanbo_linq" Method="list_thongtincanbo_linq">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="list_thongtincanbo_linqResult">
+      <Column Name="quyenhan" Type="System.String" DbType="NVarChar(19)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_dangnhap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_thongtindonthukhieunai_gopbang_linq" Method="list_thongtindonthukhieunai_gopbang_linq">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="list_thongtindonthukhieunai_gopbang_linqResult">
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.String" DbType="NVarChar(18)" CanBeNull="true" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_thongtintocao_linq" Method="list_thongtintocao_linq">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="list_thongtintocao_linqResult">
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hinhthuc_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="tocao_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_conoidung_khieunai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_nhieunoidung_linhvuc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="xuly_tocao_khongthuoc_thamquyen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="chuyentocao_chodonvingoai" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="duoc_nhanketqua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duoc_baove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yeucaukhac" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.listtbbidon" Method="listtbbidon">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="listtbbidonResult">
+      <Column Name="id_bidon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.listtbnhatky" Method="listtbnhatky">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="listtbnhatkyResult">
+      <Column Name="id_nhatky_guidon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.listtbthongtinkhieunai" Method="listtbthongtinkhieunai">
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="listtbthongtinkhieunaiResult">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chuky_nhieunguoi_motnguoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khieunai_conoidung_tocao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.load_sua_canbo" Method="load_sua_canbo">
+    <Parameter Name="ma_canbo" Type="System.Int32" DbType="Int" />
+    <ElementType Name="load_sua_canboResult">
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_dangnhap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="matkhau_dangnhap" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="quyenhan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.login_canbo_linq" Method="login_canbo_linq">
+    <Parameter Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten_dangnhap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="matkhau_dangnhap" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.nhatky_guidon_canchuyen" Method="nhatky_guidon_canchuyen">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="nhatky_guidon_canchuyenResult">
+      <Column Name="id_nhatky_guidon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_vietdon" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_nhandon_bandau" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="canbo_tiepnhan_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="coquan_chuyenden" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_bandau_cua_donthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="hinhthuc_tiepnhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngay_tiepnhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.stt_donthukhieunai" Method="stt_donthukhieunai" IsComposable="true">
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.stt_donthukhieunai_linq" Method="stt_donthukhieunai_linq" IsComposable="true">
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.sua_canbo" Method="sua_canbo">
+    <Parameter Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_canbo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sohieu_cand" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten_dangnhap" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="matkhau_dangnhap" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="capbac" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chucvu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="quyenhan" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sua_quatrinhgiaiquyetkhieunai_guiden_linq" Method="sua_quatrinhgiaiquyetkhieunai_guiden_linq">
+    <Parameter Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_congvan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sua_quatrinhgiaiquyetkhieunai_linq" Method="sua_quatrinhgiaiquyetkhieunai_linq">
+    <Parameter Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="donvinhan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten_donvinhan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaynhan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_congvan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="statuss" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="forward" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sua_quatrinhgiaiquyettocao_guiden_linq" Method="sua_quatrinhgiaiquyettocao_guiden_linq">
+    <Parameter Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_quyetdinh_thuly" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="ngay_thuly" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sua_quatrinhgiaiquyettocao_linq" Method="sua_quatrinhgiaiquyettocao_linq">
+    <Parameter Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hinhthuc_xuly" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donvinhan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ngaynhan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_quyetdinh_thuly" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="ngay_thuly" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="statuss" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="forward" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.tomtatnoidungdongthu" Method="tomtatnoidungdongthu">
+    <Parameter Name="ma_donthu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="tomtatnoidungdongthuResult">
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.tomtatnoidungtocao" Method="tomtatnoidungtocao">
+    <Parameter Name="ma_donthu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="tomtatnoidungtocaoResult">
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.them_canbo" Method="them_canbo">
+    <Parameter Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sohieu_cand" Type="System.Int32" DbType="Int" />
+    <Parameter Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten_dangnhap" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="matkhau_dangnhap" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="capbac" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chucvu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="quyenhan" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.them_canhan_tochuc_khieunai" Method="them_canhan_tochuc_khieunai" IsComposable="true">
+    <Parameter Name="ma_tb_donthu_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tochuc_canhan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sdt" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="email" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_cmnd" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="noicap_cmnd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="dia_chi" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.them_donthukhieunai" Method="them_donthukhieunai" IsComposable="true">
+    <Parameter Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ma_canbo_nhaplieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tochuc_canhan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nacdanh_codanh" Type="System.Int32" DbType="Int" />
+    <Parameter Name="chuky_nhieunguoi_motnguoi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="loai_don" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tomtat_noidung" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="dieukien_xuly_du_hoackhong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="giayto_tailieugoc_kemtheo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="tinhchat_vuviec_phuctap_dongian" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" />
+    <Parameter Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khieunai_conoidung_tocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noigui" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaygio_nhap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaygio_sua" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.them_quatrinhgiaiquyetkhieunai_linq" Method="them_quatrinhgiaiquyetkhieunai_linq">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="donvinhan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ten_donvinhan" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="ngaynhan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_congvan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="statuss" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="date_ngaykhoitao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="foward" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.them_quatrinhgiaiquyettocao_linq" Method="them_quatrinhgiaiquyettocao_linq">
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hinhthuc_xuly" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donvinhan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ngaynhan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_quyetdinh_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_thuly" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" />
+    <Parameter Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="statuss" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ngaykhoitao" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="forward" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.them_temple_bidon" Method="them_temple_bidon" IsComposable="true">
+    <Parameter Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="bidon_tochuc_canhan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="hoten_canhan" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="sohieu_cand" Type="System.String" DbType="NVarChar(15)" />
+    <Parameter Name="nghe_nghiep" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="capbac" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="chucvu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ten_coquandonvi" Type="System.String" DbType="NVarChar(150)" />
+    <Parameter Name="diachi" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="thuoc_lucluong" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.thongke_giaiquyetkhieunai" Method="thongke_giaiquyetkhieunai">
+    <Parameter Name="date_tungay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="date_denngay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="madovi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="thongke_giaiquyetkhieunaiResult">
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.thongke_giaiquyettocao" Method="thongke_giaiquyettocao">
+    <Parameter Name="date_tungay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="date_denngay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="madovi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="thongke_giaiquyettocaoResult">
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.thongketonghop_khieunai" Method="thongketonghop_khieunai">
+    <Parameter Name="date_tungay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="date_denngay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="thongketonghop_khieunaiResult">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="phanloai_khieunai" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_donvinhan" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_khoitao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_thongtinkhieunai1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="canhan_tochuc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="id_thongtinkhieunai2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="id_thongtinkhieunai3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thuoclucluong" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.thongketonghop_tocao" Method="thongketonghop_tocao">
+    <Parameter Name="date_tungay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="date_denngay" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="thongketonghop_tocaoResult">
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="phanloai_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thuly" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaykhoitao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_thongtintocao2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="canhan_tochuc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="id_thongtintocao3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nguondon_bandau" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="id_thongtintocao4" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thuoclucluong" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.update_trangthaichuyedonthu" Method="update_trangthaichuyedonthu">
+    <Parameter Name="maquatrinhgiaiquyet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="chuyendonthu" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.update_trangthaichuyentocao" Method="update_trangthaichuyentocao">
+    <Parameter Name="maquatrinhgiaiquyet" Type="System.Int32" DbType="Int" />
+    <Parameter Name="chuyentocao" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdatePassword" Method="UpdatePassword">
+    <Parameter Name="macanbo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="password" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.xem_id_thongtinkhieunai" Method="xem_id_thongtinkhieunai">
+    <Parameter Name="ma_donthu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" />
+    <ElementType Name="xem_id_thongtinkhieunaiResult">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xem_id_thongtintocao" Method="xem_id_thongtintocao">
+    <Parameter Name="ma_donthutocao" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <ElementType Name="xem_id_thongtintocaoResult">
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xem_madonvi" Method="xem_madonvi">
+    <Parameter Name="ma_donthu" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="lan_giaiquyet" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="xem_madonviResult">
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xem_thongtin_quatrinhgiaiquyet_linq" Method="xem_thongtin_quatrinhgiaiquyet_linq">
+    <Parameter Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="xem_thongtin_quatrinhgiaiquyet_linqResult">
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xem_thongtin_quatrinhgiaiquyettocao" Method="xem_thongtin_quatrinhgiaiquyettocao">
+    <Parameter Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="xem_thongtin_quatrinhgiaiquyettocaoResult">
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thuly" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xem_thongtindonthu_gopbang_linq" Method="xem_thongtindonthu_gopbang_linq">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="xem_thongtindonthu_gopbang_linqResult">
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chuky_nhieunguoi_motnguoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khieunai_conoidung_tocao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xem_thongtintocao_linq" Method="xem_thongtintocao_linq">
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="xem_thongtintocao_linqResult">
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hinhthuc_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="tocao_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_conoidung_khieunai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_nhieunoidung_linhvuc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="xuly_tocao_khongthuoc_thamquyen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="chuyentocao_chodonvingoai" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="duoc_nhanketqua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duoc_baove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yeucaukhac" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xemcanbo" Method="xemcanbo">
+    <ElementType Name="xemcanboResult">
+      <Column Name="quyenhan" Type="System.String" DbType="NVarChar(19)" CanBeNull="true" />
+      <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="hoten_chiensy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_dangnhap" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="capbac" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="chucvu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_canbo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.xoa_quatrinhgiaiquyet" Method="xoa_quatrinhgiaiquyet">
+    <Parameter Name="id_quatrinhgiaiquyet" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.xoa_quatrinhgiaiquyettocao" Method="xoa_quatrinhgiaiquyettocao">
+    <Parameter Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.xoa_thongtinkhieunai" Method="xoa_thongtinkhieunai">
+    <Parameter Name="IdThongtindonthu" Parameter="idThongtindonthu" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.xoa_thongtintocao" Method="xoa_thongtintocao">
+    <Parameter Name="IdThongtintocao" Parameter="idThongtintocao" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.chuyendonthukhieunai_temp" Method="chuyendonthukhieunai_temp">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.chuyendonthutocao_temp" Method="chuyendonthutocao_temp">
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" />
+    <Parameter Name="donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.check_xoadonthu" Method="check_xoadonthu">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_xoadonthuResult">
+      <Column Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_xoatocao" Method="check_xoatocao">
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_xoatocaoResult">
+      <Column Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_quatrinhgiaiquyet" Method="list_quatrinhgiaiquyet">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="list_quatrinhgiaiquyetResult">
+      <Column Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ten_donvinhan" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.list_quatrinhgiaiquyettocao" Method="list_quatrinhgiaiquyettocao">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="list_quatrinhgiaiquyettocaoResult">
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.List_theodoi_giaiquyetkhieunai" Method="List_theodoi_giaiquyetkhieunai">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kyhieudonvi" Type="System.String" DbType="NVarChar(5)" />
+    <ElementType Name="List_theodoi_giaiquyetkhieunaiResult">
+      <Column Name="ma_donthu_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="solan_khieunai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_donvinhan" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungdonthu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_congvan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaytao_congvan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_kehoachxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaylap_quyetdinh_thanhlap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_ngayxacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="totruong_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_khieunai" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_giaiquyet" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="danhgia_viec_giaiquyet" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="bidon_co_dongy_ketqua" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich_nhandan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_khoitao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_thongtinhieunai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donthu_khieunai1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi_nhapdulieu1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="chuky_nhieunguoi_motnguoi" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="loai_don" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_khieunai" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="khieunai_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="khieunai_conoidung_tocao" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="kyhieu_donvi1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.List_theodoi_giaiquyettocao" Method="List_theodoi_giaiquyettocao">
+    <Parameter Name="madonvi" Type="System.Int32" DbType="Int" />
+    <Parameter Name="kyhieudonvi" Type="System.String" DbType="NVarChar(5)" />
+    <ElementType Name="List_theodoi_giaiquyettocaoResult">
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ma_donvi" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="kyhieu_donvi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_thongtintocao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sola_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="donvinhan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ngaynhan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="capgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="noidungtocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dv_chiutrachnhiem_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="sothongbao_chonoigui" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaygui_thongbao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="songay_giaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaybatdau_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngayketthuc_giaiquyet" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thuly" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hinhthuc_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_quyetdinh_thanhlap" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_thanhlap_quyetdinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="hoten_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="capbac_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chuvu_totruong" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="thanhvien_trongdoan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_kehoach_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_batdauxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ngay_ketthucxacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngayrut_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="lydorut_tocao" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_baocao_ketqua_xacminh" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_baocao_ketqua_xacminh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="tomtat_ketqua_xuly" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="so_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngay_ketluan_noidung_tocao" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="chucvu_nguoiky_ketluan_noidung_tocao" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ngay_congkhai_ketluan" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="so_cb_khongduoc_xetthidua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikiemdiem" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bicanhcao" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bikhientrach" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangchuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bigiangcap" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_xuly_hinhsu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_cb_bituocdanhhieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_tapthe_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_canhan_duocminhoan" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="khoiphuc_loiich" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="thuhoi_taisan" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ngaynop_luu_hoso" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="cabo_thuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lanhdao_phutrach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ketthucgiaiquyet" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaykhoitao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="date_ngayketthuc" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="id_thongtintocao1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donthu_tocao1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ma_canbo_nhapdulieu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_donvi1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tochuc_canhan" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="nacdanh_codanh" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="hinhthuc_tocao" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="tomtat_noidung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="dieukien_xuly_du_hoackhong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tinhchat_vuviec_phuctap_dongian" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ma_tocao" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="tocao_lienquanden_thamquyen_nhieucand_co_khong" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_conoidung_khieunai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="tocao_nhieunoidung_linhvuc" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="lydo_khongdu_dieukien" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="xuly_tocao_khongthuoc_thamquyen" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="chuyentocao_chodonvingoai" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="duoc_nhanketqua" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="duoc_baove" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="yeucaukhac" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="noigui" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="tailieu_dinhkem" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="status_sua_xoa" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ma_quatrinhgiaiquyet_donvichuyenden" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ten_canhan_tochuc" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="so_cmnd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ngaycap_cmnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="noicap_cmnd" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="dia_chi" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ten_cqdv_canhan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="nguoi_ky_trong_don" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ghi_chu" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ngaygio_nhap" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ngaygio_sua" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ma_donvi2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ten_donvi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="kyhieu_donvi1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_chuyentocao" Method="check_chuyentocao">
+    <Parameter Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_chuyentocaoResult">
+      <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
