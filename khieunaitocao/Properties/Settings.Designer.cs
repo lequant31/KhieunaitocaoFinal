@@ -109,8 +109,8 @@ namespace khieunaitocao.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=18.220.96.55;Initial Catalog=khieunaitocao;Persist Security Info=True" +
-            ";User ID=sa;Password=1234567890aA@")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=3.17.184.93;Initial Catalog=khieunaitocao;Persist Security Info=True;" +
+            "User ID=sa;Password=1234567890aA@")]
         public string khieunaitocaoConnectionString {
             get {
                 return ((string)(this["khieunaitocaoConnectionString"]));

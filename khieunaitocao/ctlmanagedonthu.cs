@@ -92,6 +92,7 @@ namespace khieunaitocao
             }
             catch (Exception)
             {
+                //throw;
                 XtraMessageBox.Show("Vui lòng chọn đơn thư cần sửa");
             }
         }
@@ -104,6 +105,17 @@ namespace khieunaitocao
         private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check permission
+            var indexs = grv_quanlydonthukhieunai.GetSelectedRows();
+            if (indexs[0] < 0)
+            {
+                MessageBox.Show("Đây là thanh tìm kiếm. Không thể xóa được");
+                return;
+            }
+            if (indexs.Length < 0)
+            {
+                MessageBox.Show("Vui lòng chọn thông tin cần xóa");
+                return;
+            }
 
             if (dinhdanh.quyenhan == 2)
             {
@@ -130,17 +142,6 @@ namespace khieunaitocao
 
             try
             {
-                var indexs = grv_quanlydonthukhieunai.GetSelectedRows();
-                if (indexs[0] < 0)
-                {
-                    MessageBox.Show("Đây là thanh tìm kiếm. Không thể xóa được");
-                    return;
-                }
-                if (indexs.Length < 0)
-                {
-                    MessageBox.Show("Vui lòng chọn thông tin cần xóa");
-                    return;
-                }
                 int a = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
                 using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
                 {

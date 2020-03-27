@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="khieunaitocao" Class="khieunaitocaoContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=khieunaitocao;Persist Security Info=True;User ID=sa" SettingsObjectName="khieunaitocao.Properties.Settings" SettingsPropertyName="khieunaitocaoConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=3.17.184.93;Initial Catalog=khieunaitocao;Persist Security Info=True;User ID=sa" SettingsObjectName="khieunaitocao.Properties.Settings" SettingsPropertyName="khieunaitocaoConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.clonebidon" Member="clonebidons">
     <Type Name="clonebidon">
       <Column Name="id_bidon" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
@@ -1963,6 +1963,20 @@
       <Column Name="forward" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="hinhthuc_xuly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="ma_donthu_tocao" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_suatocao" Method="check_suatocao">
+    <Parameter Name="id_thongtintocao" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_suatocaoResult">
+      <Column Name="id_quatrinhgiaiquyettocao" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_suadonthu" Method="check_suadonthu">
+    <Parameter Name="id_thongtinkhieunai" Type="System.Int32" DbType="Int" />
+    <ElementType Name="check_suadonthuResult">
+      <Column Name="id_quatrinhgiaiquyetkhieunai" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="statuss" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

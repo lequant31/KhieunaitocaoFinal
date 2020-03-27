@@ -17,6 +17,7 @@ namespace khieunaitocao
         private khieunaitocaoContextDataContext _khieunaitocaoContext;
         public string trangthaigiaiquyet;
         public string status;
+        public string checkxoasua;
         public int hinhthucxuly;
 
         private void load_items_donvi()
@@ -127,13 +128,27 @@ namespace khieunaitocao
                     }
                    
                 }
-                if (txt_madonthukhieunai.Text.Substring(0, 4) != dinhdanh.kyhieu_donvi)
+                if (txt_madonthukhieunai.Text.Substring(0, 4) != dinhdanh.kyhieu_donvi && com_hinhthucxuly.Text.Trim()== "Chuyển đơn vị khác")
                 {
                     XtraMessageBox.Show("Đơn thư không được chuyển cho đơn vị khác");
                     return;
                 }
                 #endregion check dieu kien
+                #region check so lan khieu nai
 
+                if (txt_lankhieunaithu.Text.Trim() != "1" && txt_lankhieunaithu.Text.Trim() != "2")
+                {
+                    XtraMessageBox.Show("Vui lòng chỉ nhập số 1 cho lần đầu.\n Số 2 cho lần giải quyết tiếp theo.");
+                    txt_lankhieunaithu.Text = null;
+                    txt_lankhieunaithu.Focus();
+                    return;
+                }
+                if (checkxoasua == "Finish")
+                {
+                    XtraMessageBox.Show("Đã kết thúc giải quyết không được phép sửa");
+                    return;
+                }
+                #endregion check so lan khieu nai
                 var id_thongtinkhieunai = _khieunaitocaoContext.xem_id_thongtinkhieunai(txt_madonthukhieunai.Text.Trim(), dinhdanh.madonvi).SingleOrDefault();
                 int _ID = id_thongtinkhieunai.id_thongtinhieunai;
                 int? _id_ma_quatrinhgiaiquyet_guiden = id_thongtinkhieunai.ma_quatrinhgiaiquyet_donvichuyenden;
@@ -199,6 +214,7 @@ namespace khieunaitocao
                     //}
 
                     XtraMessageBox.Show("Thêm thông tin thành công");
+                    Fun_null();
                 }
                 else
                 {
@@ -219,6 +235,7 @@ namespace khieunaitocao
                     //}
 
                     XtraMessageBox.Show("Sửa thông tin thành công");
+                    Fun_null();
                 }
             }
         }
@@ -314,11 +331,10 @@ namespace khieunaitocao
             try
             {
                 Fun_save();
-                Fun_null();
+               
             }
             catch (Exception)
             {
-                //throw;
                 XtraMessageBox.Show("Kiểm tra lại thông tin");
             }
         }
@@ -332,13 +348,17 @@ namespace khieunaitocao
                 XtraMessageBox.Show("Không có quyền xóa");
                 return;
             }
-
+            if (checkxoasua == "Finish")
+            {
+                XtraMessageBox.Show("Đã kết thúc giải quyết không được phép xóa");
+                return;
+            }
             if (check_quatrinhgiaiquyet.Caption == "Kết thúc quá trình giải quyết")
             {
                 XtraMessageBox.Show("Đã kết thúc giải quyết không được phép xóa");
                 return;
             }
-
+           
             #endregion check dieukien
 
             try
@@ -383,20 +403,6 @@ namespace khieunaitocao
             }
         }
 
-        private void txt_lankhieunaithu_Leave(object sender, EventArgs e)
-        {
-            #region check so lan khieu nai
-
-            if (txt_lankhieunaithu.Text.Trim() != "1" && txt_lankhieunaithu.Text.Trim() != "2")
-            {
-                XtraMessageBox.Show("Vui lòng chỉ nhập số 1 cho lần đầu.\n Số 2 cho lần giải quyết tiếp theo.");
-                txt_lankhieunaithu.Text = null;
-                txt_lankhieunaithu.Focus();
-                return;
-            }
-
-            #endregion check so lan khieu nai
-        }
 
         private void com_hinhthucxuly_Leave(object sender, EventArgs e)
         {
@@ -404,6 +410,8 @@ namespace khieunaitocao
 
             if (com_hinhthucxuly.Text == "Chuyển đơn vị khác")
             {
+                look_donvinhan.Text = null;
+                date_ngaychuyen.EditValue = null;
                 look_donvinhan.Properties.ReadOnly = false;
                 date_ngaychuyen.Properties.ReadOnly = false;
                 look_donvinhan.Text = null;
@@ -412,12 +420,16 @@ namespace khieunaitocao
             }
             if (com_hinhthucxuly.Text == "Trực tiếp xử lý")
             {
+                look_donvinhan.Text = null;
+                date_ngaychuyen.EditValue = null;
                 look_donvinhan.Properties.ReadOnly = true;
                 date_ngaychuyen.Properties.ReadOnly = true;
                 return;
             }
             if (com_hinhthucxuly.Text == "Không xử lý")
             {
+                look_donvinhan.Text = null;
+                date_ngaychuyen.EditValue = null;
                 look_donvinhan.Properties.ReadOnly = true;
                 date_ngaychuyen.Properties.ReadOnly = true;
 

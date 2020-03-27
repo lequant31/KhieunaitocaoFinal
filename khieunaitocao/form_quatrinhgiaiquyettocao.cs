@@ -22,6 +22,7 @@ namespace khieunaitocao
         public int _id_thongtintocao;
         public int hinhthucxuly;
         public string statuss;
+        public string checkxoasua;
         khieunaitocaoContextDataContext _khieunaitocaoContext;
         tb_giaiquyettocao objTC = new tb_giaiquyettocao();
         public string trangthaigiaiquyet;
@@ -328,9 +329,14 @@ namespace khieunaitocao
                 XtraMessageBox.Show("Đã kết thúc giải quyết không được phép xóa");
                 return;
             }
-            if(txt_ma_donthu_tocao.Text.Substring(0,4) != dinhdanh.kyhieu_donvi)
+            if(txt_ma_donthu_tocao.Text.Substring(0,4) != dinhdanh.kyhieu_donvi && combo_hinhthuc_xuly.Text.Trim()=="Chuyển đơn vị khác")
             {
                 XtraMessageBox.Show("Không được xóa đơn thư tố cáo chuyển đến");
+                return;
+            }
+            if (checkxoasua=="finish")
+            {
+                XtraMessageBox.Show("Đã kết thúc giải quyết không được phép xóa");
                 return;
             }
             #endregion
@@ -381,19 +387,21 @@ namespace khieunaitocao
             #region check hinh thuc xu ly
             if (combo_hinhthuc_xuly.Text == "Không xử lý")
             {
+                combo_donvinhan.EditValue = null;
+                date_ngaynhan.EditValue = null;
                 combo_donvinhan.Properties.ReadOnly = true;
                 date_ngaynhan.Properties.ReadOnly = true;
-                combo_donvinhan.Text = null;
-                date_ngaynhan.EditValue = null;
+
                 hinhthucxuly = 2;
                 return;
             }
             if(combo_hinhthuc_xuly.Text=="Trực tiếp xử lý")
             {
+                combo_donvinhan.EditValue = null;
+                date_ngaynhan.EditValue = null;
                 combo_donvinhan.Properties.ReadOnly = true;
                 date_ngaynhan.Properties.ReadOnly = true;
-                combo_donvinhan.Text = null;
-                date_ngaynhan.EditValue = null;
+
                 hinhthucxuly = 0;
                 return;
             }

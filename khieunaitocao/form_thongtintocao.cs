@@ -219,121 +219,165 @@ namespace khieunaitocao
         }
         private void bar_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            try
+            {
+                #region kiemtra
+                if (dinhdanh.quyenhan == 2)
+                {
+                    XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép thay đổi");
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(combo_hinhthuc_tocao.Text.Trim()) || string.IsNullOrWhiteSpace(combo_hinhthuc_tocao.Text.Trim()))
+                {
+                    XtraMessageBox.Show("Vui lòng chọn loại đơn khiếu nại");
+                    combo_hinhthuc_tocao.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(treeListLookUp_hinhthuctocao.Text.Trim()) || string.IsNullOrWhiteSpace(treeListLookUp_hinhthuctocao.Text.Trim()))
+                {
+                    XtraMessageBox.Show("Vui lòng chọn loại đơn khiếu nại");
+                    treeListLookUp_hinhthuctocao.Focus();
+                    return;
+                }
+                if (rdb_tochuc_canhan.SelectedIndex == 0)
+                {
+                    if (txt_hoten_canhan.Text.Trim() == null)
+                    {
+                        XtraMessageBox.Show("Vui lòng nhập tên cá nhân đứng đơn");
+                        txt_hoten_canhan.Focus();
+                        return;
+                    }
+                }
+                if (rdb_tochuc_canhan.SelectedIndex == 1)
+                {
+                    if (txt_tencoquan_donvi_tochuc.Text.Trim() == null)
+                    {
+                        XtraMessageBox.Show("Vui lòng nhập tên tổ chức đứng đơn");
+                        txt_tencoquan_donvi_tochuc.Focus();
+                        return;
+                    }
+                }
+                if (bool_sua == false)
+                {
+                    //var _lst = _khieunaitocaoContext.tb_thongtinkhieunais.Where(p => p.ma_donthu_khieunai == txt_madonthu.Text.Trim()).FirstOrDefault();
+                    int _lst = _khieunaitocaoContext.check_matocao_linq(dinhdanh.madonvi, dinhdanh.kyhieu_donvi + DateTime.Now.Year.ToString() + txt_ma_tocao.Text.Trim());
+                    if (_lst == 1)
+                    {
+                        XtraMessageBox.Show("Mã đơn thư tố cáo đã tồn tại");
+                        txt_ma_tocao.Focus();
+                        return;
+                    }
+                }
+                if (bool_sua == true)
+                {
+                    if (txt_ma_tocao.Text.Substring(0, 4) != dinhdanh.kyhieu_donvi)
+                    {
+                        XtraMessageBox.Show("Không được quyền sửa");
+                        return;
+                    }
+                    using (khieunaitocaoContextDataContext khieunaitocaoContext = new khieunaitocaoContextDataContext())
+                    {
+                        var checksua = khieunaitocaoContext.check_suatocao(id_thongtintocao).ToList();
+                        if (checksua.Count > 1)
+                        {
+                            XtraMessageBox.Show("Không được quyền sửa");
+                            return;
+                           
+                         
+                        }
+                        if (checksua.Count == 1)
+                        {
+                           
+                            if (checksua[0].statuss == "Finish")
+                            {
+                                XtraMessageBox.Show("Không được quyền sửa");
+                                return;
+                            }
+
+                        }
+                    }
+                }
+                #endregion
+                if (bool_sua == true)
+                {
+                    objTC = _khieunaitocaoContext.tb_thongtintocaos.Where(a => a.ma_donthu_tocao == txt_ma_tocao.Text).SingleOrDefault();
+                }
+                objTC.ma_donvi = dinhdanh.madonvi;
+
+                objTC.ma_canbo_nhapdulieu = dinhdanh.ma_canbo;
+                objTC.tochuc_canhan = (bool)rdb_tochuc_canhan.EditValue;
+                objTC.nacdanh_codanh = (bool)rdb_loaihinh_tocao.EditValue;
+                if ((bool)rdb_tochuc_canhan.EditValue == true)
+                {
+                    objTC.ten_canhan_tochuc = txt_hoten_canhan.Text;
+                    objTC.sdt = txt_sodienthoai_canhan.Text;
+                    objTC.email = txt_email_canhan.Text;
+                    objTC.so_cmnd = txt_cmnd_canhan.Text;
+                    objTC.ngaycap_cmnd = (DateTime?)txt_ngaycap_cmnd.EditValue;
+                    objTC.noicap_cmnd = txt_noicap_cmnd.Text;
+                    objTC.dia_chi = txt_diachi_canhan.Text;
+                    objTC.ten_cqdv_canhan = txt_coquan_donvi_canhan.Text;
+                    objTC.nguoi_ky_trong_don = null;
+                }
+                else
+                {
+                    objTC.ten_canhan_tochuc = txt_tencoquan_donvi_tochuc.Text;
+                    objTC.sdt = txt_sodienthoaitochuc.Text;
+                    objTC.email = txt_email_tochuc.Text;
+                    objTC.so_cmnd = null;
+                    objTC.ngaycap_cmnd = null;
+                    objTC.noicap_cmnd = null;
+                    objTC.dia_chi = txt_diachi_tochuc.Text;
+                    objTC.ten_cqdv_canhan = null;
+                    objTC.nguoi_ky_trong_don = txt_nguoikytrongdon.Text;
+                }
+                objTC.hinhthuc_tocao = combo_hinhthuc_tocao.Text;
+                objTC.ma_tocao = treeListLookUp_hinhthuctocao.EditValue.ToString();
+                objTC.tomtat_noidung = memo_tomtat_tocao.Text;
+                objTC.tinhchat_vuviec_phuctap_dongian = (bool)rdb_tinhchat.EditValue;
+                objTC.dieukien_xuly_du_hoackhong = (bool)rdb_dieukien_xuly.EditValue;
+                objTC.tailieu_dinhkem = btn_taikieudinhkem.Text;
+                objTC.lydo_khongdu_dieukien = combo_lydokhongdudieukien_xuly.Text;
+                objTC.xuly_tocao_khongthuoc_thamquyen = combo_xuly_tocao_khongthuoc_thamquyen.Text;
+                objTC.tocao_lienquanden_thamquyen_nhieucand_co_khong = (bool)rdb_lienquan_dennhieu_cand.EditValue;
+                objTC.chuyentocao_chodonvingoai = txt_chuyendonvingoai.Text;
+                objTC.ngaygio_nhap = DateTime.Now;
+                objTC.ngaygio_sua = ngaysua;
+                objTC.ghi_chu = memo_ghichu.Text;
+                if (check_duocnhanketqua.Checked == true)
+                {
+                    objTC.duoc_nhanketqua = 1;
+                }
+                else
+                {
+                    objTC.duoc_nhanketqua = 0;
+                }
+                if (check_duocbaove.Checked == true)
+                {
+                    objTC.duoc_baove = 1;
+                }
+                else
+                {
+                    objTC.duoc_baove = 0;
+                }
+                objTC.yeucaukhac = memo_yeucaukhac.Text;
+                if (bool_sua == false)
+                {
+                    objTC.ma_donthu_tocao = dinhdanh.kyhieu_donvi + DateTime.Now.Year + txt_ma_tocao.Text.Trim();
+                    _khieunaitocaoContext.tb_thongtintocaos.InsertOnSubmit(objTC);
+                }
+                _khieunaitocaoContext.SubmitChanges();
+                /////////////////////////////////////////////////////////
+                XtraMessageBox.Show("Đã lưu được");
+                thongtin_load();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
          
-            #region kiemtra
-            if (dinhdanh.quyenhan == 2)
-            {
-                XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép thay đổi");
-                return;
-            }
-
-            //if (com_loaidon.Text.Trim() == "Loại đơn" || com_loaidon.Text.Trim() == null)
-            //{
-            //    XtraMessageBox.Show("Vui lòng chọn loại đơn khiếu nại");
-            //    com_loaidon.Focus();
-            //    return;
-            //}
-            if (rdb_tochuc_canhan.SelectedIndex == 0)
-            {
-                if (txt_hoten_canhan.Text.Trim() == null)
-                {
-                    XtraMessageBox.Show("Vui lòng nhập tên cá nhân đứng đơn");
-                    txt_hoten_canhan.Focus();
-                    return;
-                }
-            }
-            if (rdb_tochuc_canhan.SelectedIndex == 1)
-            {
-                if (txt_tencoquan_donvi_tochuc.Text.Trim() == null)
-                {
-                    XtraMessageBox.Show("Vui lòng nhập tên tổ chức đứng đơn");
-                    txt_tencoquan_donvi_tochuc.Focus();
-                    return;
-                }
-            }
-            if (bool_sua == false)
-            {
-                //var _lst = _khieunaitocaoContext.tb_thongtinkhieunais.Where(p => p.ma_donthu_khieunai == txt_madonthu.Text.Trim()).FirstOrDefault();
-                int _lst = _khieunaitocaoContext.check_matocao_linq(dinhdanh.madonvi, txt_ma_tocao.Text.Trim());
-                if (_lst == 1)
-                {
-                    XtraMessageBox.Show("Mã đơn thư tố cáo đã tồn tại");
-                    txt_ma_tocao.Focus();
-                    return;
-                }
-            }
-            #endregion
-            if (bool_sua == true)
-            {
-                objTC = _khieunaitocaoContext.tb_thongtintocaos.Where(a => a.ma_donthu_tocao == txt_ma_tocao.Text).SingleOrDefault();
-            }
-            objTC.ma_donvi = dinhdanh.madonvi;
-
-            objTC.ma_canbo_nhapdulieu = dinhdanh.ma_canbo;
-            objTC.tochuc_canhan = (bool)rdb_tochuc_canhan.EditValue;
-            objTC.nacdanh_codanh = (bool)rdb_loaihinh_tocao.EditValue;
-            if ((bool)rdb_tochuc_canhan.EditValue == true)
-            {
-                objTC.ten_canhan_tochuc = txt_hoten_canhan.Text;
-                objTC.sdt = txt_sodienthoai_canhan.Text;
-                objTC.email = txt_email_canhan.Text;
-                objTC.so_cmnd = txt_cmnd_canhan.Text;
-                objTC.ngaycap_cmnd = (DateTime?)txt_ngaycap_cmnd.EditValue;
-                objTC.noicap_cmnd = txt_noicap_cmnd.Text;
-                objTC.dia_chi = txt_diachi_canhan.Text;
-                objTC.ten_cqdv_canhan = txt_coquan_donvi_canhan.Text;
-                objTC.nguoi_ky_trong_don = null;
-            }
-            else
-            {
-                objTC.ten_canhan_tochuc = txt_tencoquan_donvi_tochuc.Text;
-                objTC.sdt = txt_sodienthoaitochuc.Text;
-                objTC.email = txt_email_tochuc.Text;
-                objTC.so_cmnd = null;
-                objTC.ngaycap_cmnd = null;
-                objTC.noicap_cmnd = null;
-                objTC.dia_chi = txt_diachi_tochuc.Text;
-                objTC.ten_cqdv_canhan = null;
-                objTC.nguoi_ky_trong_don = txt_nguoikytrongdon.Text;
-            }
-            objTC.hinhthuc_tocao = combo_hinhthuc_tocao.Text;
-            objTC.ma_tocao = treeListLookUp_hinhthuctocao.EditValue.ToString();
-            objTC.tomtat_noidung = memo_tomtat_tocao.Text;
-            objTC.tinhchat_vuviec_phuctap_dongian = (bool)rdb_tinhchat.EditValue;
-            objTC.dieukien_xuly_du_hoackhong = (bool)rdb_dieukien_xuly.EditValue;
-            objTC.tailieu_dinhkem = btn_taikieudinhkem.Text;
-            objTC.lydo_khongdu_dieukien = combo_lydokhongdudieukien_xuly.Text;
-            objTC.xuly_tocao_khongthuoc_thamquyen = combo_xuly_tocao_khongthuoc_thamquyen.Text;
-            objTC.tocao_lienquanden_thamquyen_nhieucand_co_khong = (bool)rdb_lienquan_dennhieu_cand.EditValue;
-            objTC.chuyentocao_chodonvingoai = txt_chuyendonvingoai.Text;
-            objTC.ngaygio_nhap = DateTime.Now;
-            objTC.ngaygio_sua = ngaysua;
-            objTC.ghi_chu = memo_ghichu.Text;
-            if (check_duocnhanketqua.Checked==true)
-            {
-                objTC.duoc_nhanketqua = 1;
-            }
-            else
-            {
-                objTC.duoc_nhanketqua = 0;
-            }
-            if (check_duocbaove.Checked == true)
-            {
-                objTC.duoc_baove = 1;
-            }
-            else
-            {
-                objTC.duoc_baove = 0;
-            }
-            objTC.yeucaukhac = memo_yeucaukhac.Text;
-            if (bool_sua == false)
-            {
-                objTC.ma_donthu_tocao = dinhdanh.kyhieu_donvi +DateTime.Now.Year+ txt_ma_tocao.Text.Trim();
-                _khieunaitocaoContext.tb_thongtintocaos.InsertOnSubmit(objTC);
-            }
-            _khieunaitocaoContext.SubmitChanges();
-            /////////////////////////////////////////////////////////
-            XtraMessageBox.Show("Đã lưu được");
         }
     }
 }

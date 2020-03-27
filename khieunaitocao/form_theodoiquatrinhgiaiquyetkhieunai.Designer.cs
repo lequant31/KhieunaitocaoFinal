@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_theodoiquatrinhgiaiquyetkhieunai));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar_luu = new DevExpress.XtraBars.BarButtonItem();
-            this.bar_lammoi = new DevExpress.XtraBars.BarButtonItem();
-            this.bar_xoa = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.bar_luu = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_xoa = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_lammoi = new DevExpress.XtraBars.BarButtonItem();
             this.bar_chuyendonvikhac = new DevExpress.XtraBars.BarButtonItem();
             this.barCheckItem1 = new DevExpress.XtraBars.BarCheckItem();
             this.panelControl_root = new DevExpress.XtraEditors.PanelControl();
@@ -86,9 +87,6 @@
             this.com_hinhthucxuly = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txt_madonthukhieunai = new DevExpress.XtraEditors.TextEdit();
             this.look_donvinhan = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControl_root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -148,6 +146,9 @@
             this.layoutControlItem45 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlGroup6 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem30 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_root)).BeginInit();
             this.panelControl_root.SuspendLayout();
@@ -208,7 +209,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.com_hinhthucxuly.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_madonthukhieunai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.look_donvinhan.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl_root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
@@ -268,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
             this.SuspendLayout();
             // 
             // barManager1
@@ -284,21 +285,6 @@
             this.bar_chuyendonvikhac,
             this.barCheckItem1});
             this.barManager1.MaxItemId = 13;
-            // 
-            // bar_luu
-            // 
-            this.bar_luu.Id = 10;
-            this.bar_luu.Name = "bar_luu";
-            // 
-            // bar_lammoi
-            // 
-            this.bar_lammoi.Id = 12;
-            this.bar_lammoi.Name = "bar_lammoi";
-            // 
-            // bar_xoa
-            // 
-            this.bar_xoa.Id = 11;
-            this.bar_xoa.Name = "bar_xoa";
             // 
             // barDockControlTop
             // 
@@ -331,6 +317,21 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1236, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 594);
+            // 
+            // bar_luu
+            // 
+            this.bar_luu.Id = 10;
+            this.bar_luu.Name = "bar_luu";
+            // 
+            // bar_xoa
+            // 
+            this.bar_xoa.Id = 11;
+            this.bar_xoa.Name = "bar_xoa";
+            // 
+            // bar_lammoi
+            // 
+            this.bar_lammoi.Id = 12;
+            this.bar_lammoi.Name = "bar_lammoi";
             // 
             // bar_chuyendonvikhac
             // 
@@ -444,7 +445,14 @@
             this.date_ngayketthuc.StyleController = this.layoutControl1;
             this.date_ngayketthuc.TabIndex = 45;
             // 
-           
+            // txt_lankhieunaithu
+            // 
+            this.txt_lankhieunaithu.Location = new System.Drawing.Point(384, 4);
+            this.txt_lankhieunaithu.Name = "txt_lankhieunaithu";
+            this.txt_lankhieunaithu.Size = new System.Drawing.Size(97, 20);
+            this.txt_lankhieunaithu.StyleController = this.layoutControl1;
+            this.txt_lankhieunaithu.TabIndex = 46;
+            // 
             // txt_bicachchuc
             // 
             this.txt_bicachchuc.EditValue = "0";
@@ -624,7 +632,14 @@
             this.date_ngayrut.StyleController = this.layoutControl1;
             this.date_ngayrut.TabIndex = 29;
             // 
-           
+            // com_ketquaxacminh
+            // 
+            this.com_ketquaxacminh.Location = new System.Drawing.Point(729, 266);
+            this.com_ketquaxacminh.Name = "com_ketquaxacminh";
+            this.com_ketquaxacminh.Size = new System.Drawing.Size(286, 20);
+            this.com_ketquaxacminh.StyleController = this.layoutControl1;
+            this.com_ketquaxacminh.TabIndex = 47;
+            // 
             // txt_lanhdaophutrach
             // 
             this.txt_lanhdaophutrach.Location = new System.Drawing.Point(381, 266);
@@ -800,7 +815,14 @@
             this.rdb_hinhthucxacminh.StyleController = this.layoutControl1;
             this.rdb_hinhthucxacminh.TabIndex = 14;
             // 
-            
+            // txt_songaygiaiquyet
+            // 
+            this.txt_songaygiaiquyet.Location = new System.Drawing.Point(604, 99);
+            this.txt_songaygiaiquyet.Name = "txt_songaygiaiquyet";
+            this.txt_songaygiaiquyet.Size = new System.Drawing.Size(141, 20);
+            this.txt_songaygiaiquyet.StyleController = this.layoutControl1;
+            this.txt_songaygiaiquyet.TabIndex = 48;
+            // 
             // date_ngaygiaiquyet_denngay
             // 
             this.date_ngaygiaiquyet_denngay.EditValue = null;
@@ -819,7 +841,15 @@
             this.date_ngaygiaiquyet_denngay.StyleController = this.layoutControl1;
             this.date_ngaygiaiquyet_denngay.TabIndex = 13;
             // 
-            
+            // date_ngaygiaiquyet_tungay
+            // 
+            this.date_ngaygiaiquyet_tungay.EditValue = new System.DateTime(2020, 3, 16, 0, 0, 0, 0);
+            this.date_ngaygiaiquyet_tungay.Location = new System.Drawing.Point(865, 99);
+            this.date_ngaygiaiquyet_tungay.Name = "date_ngaygiaiquyet_tungay";
+            this.date_ngaygiaiquyet_tungay.Size = new System.Drawing.Size(148, 20);
+            this.date_ngaygiaiquyet_tungay.StyleController = this.layoutControl1;
+            this.date_ngaygiaiquyet_tungay.TabIndex = 49;
+            // 
             // txt_socongvan
             // 
             this.txt_socongvan.Location = new System.Drawing.Point(123, 99);
@@ -886,34 +916,29 @@
             this.date_ngaychuyen.StyleController = this.layoutControl1;
             this.date_ngaychuyen.TabIndex = 5;
             // 
-          
-           
-           
-            // searchLookUpEdit1View
+            // com_hinhthucxuly
             // 
-            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2});
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            this.com_hinhthucxuly.Location = new System.Drawing.Point(601, 4);
+            this.com_hinhthucxuly.Name = "com_hinhthucxuly";
+            this.com_hinhthucxuly.Size = new System.Drawing.Size(140, 20);
+            this.com_hinhthucxuly.StyleController = this.layoutControl1;
+            this.com_hinhthucxuly.TabIndex = 50;
             // 
-            // gridColumn1
+            // txt_madonthukhieunai
             // 
-            this.gridColumn1.Caption = "Ký hiệu";
-            this.gridColumn1.FieldName = "kyhieu_donvi";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.txt_madonthukhieunai.Location = new System.Drawing.Point(120, 4);
+            this.txt_madonthukhieunai.Name = "txt_madonthukhieunai";
+            this.txt_madonthukhieunai.Size = new System.Drawing.Size(144, 20);
+            this.txt_madonthukhieunai.StyleController = this.layoutControl1;
+            this.txt_madonthukhieunai.TabIndex = 51;
             // 
-            // gridColumn2
+            // look_donvinhan
             // 
-            this.gridColumn2.Caption = "Tên đơn vị";
-            this.gridColumn2.FieldName = "ten_donvi";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.look_donvinhan.Location = new System.Drawing.Point(861, 4);
+            this.look_donvinhan.Name = "look_donvinhan";
+            this.look_donvinhan.Size = new System.Drawing.Size(150, 20);
+            this.look_donvinhan.StyleController = this.layoutControl1;
+            this.look_donvinhan.TabIndex = 52;
             // 
             // layoutControl_root
             // 
@@ -1509,6 +1534,32 @@
             this.layoutControlItem30.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem30.TextVisible = false;
             // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2});
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "Ký hiệu";
+            this.gridColumn1.FieldName = "kyhieu_donvi";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "Tên đơn vị";
+            this.gridColumn2.FieldName = "ten_donvi";
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
             // form_theodoiquatrinhgiaiquyetkhieunai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1519,6 +1570,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_theodoiquatrinhgiaiquyetkhieunai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Theoi dõi quá trình giải quyết khiếu nại";
@@ -1583,7 +1635,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.com_hinhthucxuly.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_madonthukhieunai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.look_donvinhan.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl_root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
@@ -1643,6 +1694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

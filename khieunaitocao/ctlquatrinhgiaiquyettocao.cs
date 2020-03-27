@@ -41,8 +41,10 @@ namespace khieunaitocao
             };
             try
             {
+                string str= grv_quatrinhgiaiquyet_tocao.GetFocusedRowCellValue("statuss").ToString();
                 int i = (int)grv_quatrinhgiaiquyet_tocao.GetFocusedRowCellValue("id_quatrinhgiaiquyettocao");
                 int y = (int)grv_quatrinhgiaiquyet_tocao.GetFocusedRowCellValue("id_thongtintocao");
+                f.checkxoasua = str;
                 f.id_quatrinhgiaiquyettocao = i;
                 f._id_thongtintocao = y;
                 f.ShowDialog();

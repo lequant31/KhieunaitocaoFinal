@@ -92,6 +92,7 @@ namespace khieunaitocao
             grc_nhatkyguidon.DataSource = null;
             grc_bidon.DataSource = objKN.tb_bidons;
             grc_nhatkyguidon.DataSource = objKN.tb_nhatky_guidons;
+            txt_madonthu.Text = null;
         }
 
         private void thongtin_addnew()
@@ -289,7 +290,26 @@ namespace khieunaitocao
             try
             {
                 #region kiemtra
-
+                if (string.IsNullOrEmpty(txt_madonthu.Text)|| string.IsNullOrWhiteSpace(txt_madonthu.Text))
+                {
+                    XtraMessageBox.Show("Vui lòng nhập đơn khiếu nại");
+                    txt_madonthu.Focus();
+                    return;
+                }
+                if (bool_sua == false)
+                {
+                    using (khieunaitocaoContextDataContext khieunaitocaoContext = new khieunaitocaoContextDataContext())
+                    {
+                        var madonthu = khieunaitocaoContext.check_madonthu_linq(dinhdanh.madonvi, txt_madonthu.Text.Trim());
+                        if (madonthu == 1)
+                        {
+                            XtraMessageBox.Show("Mã đơn thư đã tồn tại");
+                            txt_madonthu.Focus();
+                            return;
+                        }
+                    }
+                }
+                
                 if (dinhdanh.quyenhan == 2)
                 {
                     XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được thay đổi");
@@ -299,6 +319,12 @@ namespace khieunaitocao
                 {
                     XtraMessageBox.Show("Vui lòng chọn loại đơn khiếu nại");
                     com_loaidon.Focus();
+                    return;
+                }
+                if (string.IsNullOrEmpty(treelook_phanloai_khieunai.Text) || string.IsNullOrWhiteSpace(treelook_phanloai_khieunai.Text)) 
+                {
+                    XtraMessageBox.Show("Vui lòng chọn loại đơn khiếu nại");
+                    treelook_phanloai_khieunai.Focus();
                     return;
                 }
                 if ((bool)rdb_canhan.EditValue == true)
@@ -322,7 +348,7 @@ namespace khieunaitocao
                 if (bool_sua == false)
                 {
                     //var _lst = _khieunaitocaoContext.tb_thongtinkhieunais.Where(p => p.ma_donthu_khieunai == txt_madonthu.Text.Trim()).FirstOrDefault();
-                    int _lst = _khieunaitocaoContext.check_madonthu_linq(dinhdanh.madonvi, txt_madonthu.Text.Trim());
+                    int _lst = _khieunaitocaoContext.check_madonthu_linq(dinhdanh.madonvi,dinhdanh.kyhieu_donvi +DateTime.Now.Year.ToString() + txt_madonthu.Text.Trim());
                     if (_lst == 1)
                     {
                         XtraMessageBox.Show("Mã đơn thư khiếu nại đã tồn tại");
@@ -337,8 +363,28 @@ namespace khieunaitocao
                         XtraMessageBox.Show("Không được quyền sửa");
                         return;
                     }
+                    using (khieunaitocaoContextDataContext khieunaitocaoContext = new khieunaitocaoContextDataContext())
+                    {
+                        var checksua = khieunaitocaoContext.check_suadonthu(id_thongtinKN).ToList();
+                        if (checksua.Count > 1)
+                        {
+                            XtraMessageBox.Show("Không được quyền sửa");
+                            return;
+
+
+                        }
+                        if (checksua.Count == 1)
+                        {
+
+                            if (checksua[0].statuss == "Finish")
+                            {
+                                XtraMessageBox.Show("Không được quyền sửa");
+                                return;
+                            }
+
+                        }
+                    }
                 }
-             
 
                 #endregion kiemtra
 
@@ -401,11 +447,12 @@ namespace khieunaitocao
                 _khieunaitocaoContext.SubmitChanges();
                 /////////////////////////////////////////////////////////
                 XtraMessageBox.Show("Đã lưu được");
+                thongtin_load();
             }
             catch(Exception)
             {
-                throw;
-               // XtraMessageBox.Show("Không được sửa mã đơn thư");
+                //throw;
+               XtraMessageBox.Show("Không được sửa mã đơn thư");
             }
         }
 
@@ -587,5 +634,6 @@ namespace khieunaitocao
             /////////////////////////////////////////////////////////
             XtraMessageBox.Show("Đã chuyển thành công");
         }
+
     }
 }

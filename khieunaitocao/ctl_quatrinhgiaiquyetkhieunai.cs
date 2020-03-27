@@ -52,6 +52,8 @@ namespace khieunaitocao
             {
                 int i = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_quatrinhgiaiquyetkhieunai");
                 int y = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_thongtinkhieunai");
+                string _ketthucgiaiquyet = grv_quatrinhgiaiquyet.GetFocusedRowCellValue("statuss").ToString();
+                f.checkxoasua = _ketthucgiaiquyet;
                 f.id_quatrinhgiaiquyetkhieunai = i;
                 f._id_thongtinkhieunai = y;
                 f.ShowDialog();
@@ -72,6 +74,8 @@ namespace khieunaitocao
             {
                 int i = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_quatrinhgiaiquyetkhieunai");
                 int y = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_thongtinkhieunai");
+                string _ketthucgiaiquyet = grv_quatrinhgiaiquyet.GetFocusedRowCellValue("statuss").ToString();
+                f.checkxoasua = _ketthucgiaiquyet;
                 f.id_quatrinhgiaiquyetkhieunai = i;
                 f._id_thongtinkhieunai = y;
                 f.ShowDialog();

@@ -418,6 +418,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(420, 287);
             this.MinimumSize = new System.Drawing.Size(420, 287);
             this.Name = "form_quanlycanbo";

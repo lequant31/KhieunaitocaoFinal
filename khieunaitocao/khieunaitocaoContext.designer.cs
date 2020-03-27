@@ -1127,6 +1127,20 @@ namespace khieunaitocao
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id_quatrinhgiaiquyettocao);
 			return ((ISingleResult<check_chuyentocaoResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.check_suatocao")]
+		public ISingleResult<check_suatocaoResult> check_suatocao([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id_thongtintocao)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id_thongtintocao);
+			return ((ISingleResult<check_suatocaoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.check_suadonthu")]
+		public ISingleResult<check_suadonthuResult> check_suadonthu([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> id_thongtinkhieunai)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id_thongtinkhieunai);
+			return ((ISingleResult<check_suadonthuResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.clonebidon")]
@@ -24245,6 +24259,94 @@ namespace khieunaitocao
 				if ((this._ma_donthu_tocao != value))
 				{
 					this._ma_donthu_tocao = value;
+				}
+			}
+		}
+	}
+	
+	public partial class check_suatocaoResult
+	{
+		
+		private int _id_quatrinhgiaiquyettocao;
+		
+		private string _statuss;
+		
+		public check_suatocaoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_quatrinhgiaiquyettocao", DbType="Int NOT NULL")]
+		public int id_quatrinhgiaiquyettocao
+		{
+			get
+			{
+				return this._id_quatrinhgiaiquyettocao;
+			}
+			set
+			{
+				if ((this._id_quatrinhgiaiquyettocao != value))
+				{
+					this._id_quatrinhgiaiquyettocao = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_statuss", DbType="NVarChar(50)")]
+		public string statuss
+		{
+			get
+			{
+				return this._statuss;
+			}
+			set
+			{
+				if ((this._statuss != value))
+				{
+					this._statuss = value;
+				}
+			}
+		}
+	}
+	
+	public partial class check_suadonthuResult
+	{
+		
+		private int _id_quatrinhgiaiquyetkhieunai;
+		
+		private string _statuss;
+		
+		public check_suadonthuResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id_quatrinhgiaiquyetkhieunai", DbType="Int NOT NULL")]
+		public int id_quatrinhgiaiquyetkhieunai
+		{
+			get
+			{
+				return this._id_quatrinhgiaiquyetkhieunai;
+			}
+			set
+			{
+				if ((this._id_quatrinhgiaiquyetkhieunai != value))
+				{
+					this._id_quatrinhgiaiquyetkhieunai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_statuss", DbType="NVarChar(50)")]
+		public string statuss
+		{
+			get
+			{
+				return this._statuss;
+			}
+			set
+			{
+				if ((this._statuss != value))
+				{
+					this._statuss = value;
 				}
 			}
 		}

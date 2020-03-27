@@ -181,7 +181,7 @@
         <classShapeMoniker Id="67319620-a732-40b8-805d-8ebec8350442" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(4.5 : 13); (4.5 : 9.83735270182292); (4.94791916666667 : 9.83735270182292 : JumpStart); (5.11458583333333 : 9.83735270182292 : JumpEnd); (6.25 : 9.83735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <associationConnector edgePoints="[(4.5 : 13); (4.5 : 9.83735270182292); (6.25 : 9.83735270182292)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/khieunaitocaoContextDataContext/tb_thongtinkhieunai/tb_thongtinkhieunai_tb_bidon" />
       <nodes>
         <classShapeMoniker Id="b8290648-9bfe-4fb8-88c5-a1edaf5952a4" />

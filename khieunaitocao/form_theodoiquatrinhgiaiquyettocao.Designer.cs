@@ -34,14 +34,14 @@
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.date_ngayketthuc = new DevExpress.XtraEditors.DateEdit();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
-            this.bar_save = new DevExpress.XtraBars.BarButtonItem();
-            this.bar_refresh = new DevExpress.XtraBars.BarButtonItem();
-            this.bar_delete = new DevExpress.XtraBars.BarButtonItem();
-            this.check_quatrinhgiaiquyet = new DevExpress.XtraBars.BarCheckItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.bar_save = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_delete = new DevExpress.XtraBars.BarButtonItem();
+            this.bar_refresh = new DevExpress.XtraBars.BarButtonItem();
+            this.check_quatrinhgiaiquyet = new DevExpress.XtraBars.BarCheckItem();
             this.txt_solangiaiquyet = new DevExpress.XtraEditors.TextEdit();
             this.txt_chucvu_nguoiky_ketluan_noidung_tocao = new DevExpress.XtraEditors.TextEdit();
             this.txt_nguoiky_ketluan_noidung_tocao = new DevExpress.XtraEditors.TextEdit();
@@ -402,10 +402,8 @@
             this.bar_delete,
             this.bar_refresh,
             this.check_quatrinhgiaiquyet});
-            this.barManager1.MaxItemId = 5;
+            this.barManager1.MaxItemId = 9;
             // 
-           
-          
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
@@ -437,6 +435,26 @@
             this.barDockControlRight.Location = new System.Drawing.Point(1188, 0);
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 598);
+            // 
+            // bar_save
+            // 
+            this.bar_save.Id = 5;
+            this.bar_save.Name = "bar_save";
+            // 
+            // bar_delete
+            // 
+            this.bar_delete.Id = 6;
+            this.bar_delete.Name = "bar_delete";
+            // 
+            // bar_refresh
+            // 
+            this.bar_refresh.Id = 7;
+            this.bar_refresh.Name = "bar_refresh";
+            // 
+            // check_quatrinhgiaiquyet
+            // 
+            this.check_quatrinhgiaiquyet.Id = 8;
+            this.check_quatrinhgiaiquyet.Name = "check_quatrinhgiaiquyet";
             // 
             // txt_solangiaiquyet
             // 
@@ -1759,6 +1777,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_theodoiquatrinhgiaiquyettocao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Theo dõi quá trình giải quyết tố cáo";
