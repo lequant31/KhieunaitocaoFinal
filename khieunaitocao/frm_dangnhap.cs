@@ -54,12 +54,13 @@ namespace khieunaitocao
 						dinhdanh.kyhieu_donvi = _dinhdanh_canbo.kyhieu_donvi.Trim();
 						dinhdanh.tencanbo = _dinhdanh_canbo.hoten_chiensy;
 						dinhdanh.password = _dinhdanh_canbo.matkhau_dangnhap;
+						dinhdanh.tenquyenhan = _dinhdanh_canbo.tenquyenhan;
 						this.Close();
 					}
 
 					if (status == 0)
 					{
-						XtraMessageBox.Show("Sai thông tin đăng nhập");
+						XtraMessageBox.Show("Sai thông tin đăng nhập hoặc tài khoản đã bị khóa");
 					}
 				}
 			}
@@ -92,7 +93,6 @@ namespace khieunaitocao
 			if (Properties.Settings.Default.RememberMe == "true")
 			{
 				txt_tendangnhap.Text = Properties.Settings.Default.Username;
-				txt_matkhaudangnhap.Text = Properties.Settings.Default.Password;
 				com_tendonvi.EditValue = Properties.Settings.Default.donvi;
 				check_rememberme.Checked = true;
 			}
@@ -110,7 +110,6 @@ namespace khieunaitocao
 			if (check_rememberme.Checked)
 			{
 				Properties.Settings.Default.Username = txt_tendangnhap.Text;
-				Properties.Settings.Default.Password = txt_matkhaudangnhap.Text;
 				Properties.Settings.Default.donvi = Convert.ToInt16(com_tendonvi.EditValue);
 				Properties.Settings.Default.RememberMe = "true";
 				Properties.Settings.Default.Save();
@@ -118,11 +117,11 @@ namespace khieunaitocao
 			else
 			{
 				Properties.Settings.Default.Username = "";
-				Properties.Settings.Default.Password = "";
 				Properties.Settings.Default.donvi = 0;
 				Properties.Settings.Default.RememberMe = "false";
 				Properties.Settings.Default.Save();
 			}
 		}
-	}
+
+    }
 }

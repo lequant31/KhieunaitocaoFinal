@@ -99,7 +99,7 @@ namespace khieunaitocao
 
         private void bar_giaiquyetkhieunai_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_quatrinhgiaiquyetkhieunai(), "Quá trình giải quyết khiếu nại");
+            LoadForm(new ctlDanhMucDonThuKhieuNai(), "In danh mục đơn khiếu nại");
         }
 
         private void bar_thongtintocao_ItemClick(object sender, ItemClickEventArgs e)
@@ -109,7 +109,7 @@ namespace khieunaitocao
 
         private void bar_quatrinhgiaiquyettocao_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctlquatrinhgiaiquyettocao(), "Quá trình giải quyết tố cáo");
+            LoadForm(new ctlthongtintocaoAllPX05(), "Theo dõi đơn tố cáo toàn tỉnh");
         }
 
         private void bar_thongtincanbo_ItemClick(object sender, ItemClickEventArgs e)
@@ -128,6 +128,13 @@ namespace khieunaitocao
             UserLookAndFeel.Default.SkinName = Properties.Settings.Default.skin;
             barStaticItem1.Caption = "Người dùng: " + dinhdanh.tencanbo;
             barStaticItem2.Caption = "Số hiệu CAND: " + dinhdanh.sohieu_cand;
+            if (dinhdanh.kyhieu_donvi == "PX05")
+            {
+                ribbonPageGroup8.Visible = true;
+                ribbonPageGroup11.Visible = true;
+                ribbonPageGroup18.Visible = true;
+                ribbonPageGroup22.Visible = true;
+            }
             //cmb_chonnam_tocao.EditValue = DateTime.Now.Year.ToString();
             //cmb_nam_khieunai.EditValue = DateTime.Now.Year.ToString();
             BaoCaoLoad();
@@ -159,16 +166,16 @@ namespace khieunaitocao
                 {
                     var series1 = chartControl1.Series[0];
                     series1.Points.Clear();
-                    var _result = _khieunaitocaoContext.thongke_giaiquyetkhieunai(date_tungay.DateTime, date_denngay.DateTime, dinhdanh.madonvi).ToList();
-                    foreach (var item in _result)
-                    {
-                        var point = new SeriesPoint();
-                        point.Argument = item.statuss;
-                        point.Tag = item.statuss;
-                        point.Values = new double[] { Convert.ToDouble(item.soluong) };
-                        series1.Points.Add(point);
-                        series1.Label.TextPattern = "{A}: {VP:p0}";
-                    }
+                    //var _result = _khieunaitocaoContext.thongke_giaiquyetkhieunai(date_tungay.DateTime, date_denngay.DateTime, dinhdanh.madonvi).ToList();
+                    //foreach (var item in _result)
+                    //{
+                    //    var point = new SeriesPoint();
+                    //    point.Argument = item.statuss;
+                    //    point.Tag = item.statuss;
+                    //    point.Values = new double[] { Convert.ToDouble(item.soluong) };
+                    //    series1.Points.Add(point);
+                    //    series1.Label.TextPattern = "{A}: {VP:p0}";
+                    //}
                 }
                 catch
                 {
@@ -185,16 +192,16 @@ namespace khieunaitocao
                 {
                     var series2 = chartControl2.Series[0];
                     series2.Points.Clear();
-                    var _result2 = _khieunaitocaoContext.thongke_giaiquyettocao(date_tungay_tocao.DateTime, date_denngay_tocao.DateTime, dinhdanh.madonvi).ToList();
-                    foreach (var item in _result2)
-                    {
-                        var point = new SeriesPoint();
-                        point.Argument = item.statuss;
-                        point.Tag = item.statuss;
-                        point.Values = new double[] { Convert.ToDouble(item.soluong) };
-                        series2.Points.Add(point);
-                        series2.Label.TextPattern = "{A}: {VP:p0}";
-                    }
+                    //var _result2 = _khieunaitocaoContext.thongke_giaiquyettocao(date_tungay_tocao.DateTime, date_denngay_tocao.DateTime, dinhdanh.madonvi).ToList();
+                    //foreach (var item in _result2)
+                    //{
+                    //    var point = new SeriesPoint();
+                    //    point.Argument = item.statuss;
+                    //    point.Tag = item.statuss;
+                    //    point.Values = new double[] { Convert.ToDouble(item.soluong) };
+                    //    series2.Points.Add(point);
+                    //    series2.Label.TextPattern = "{A}: {VP:p0}";
+                    //}
                 }
                 catch { XtraMessageBox.Show("Có lỗi xảy ra"); }
             }
@@ -206,25 +213,25 @@ namespace khieunaitocao
             {
                 try
                 {
-                    List<BieuDo> bieudo = new List<BieuDo>();
-                     var db = new BieuDo();
-                    var _bieudo1 = _khieunaitocaoContext.bieudo_cot_donthukhieunai(dinhdanh.madonvi,int.Parse( cmb_nam_khieunai.Text)).ToList();
-                    foreach (var item in _bieudo1)
-                    {
-                        db.thang = item.thang;
-                        db.tong = item.tong;
-                        bieudo.Add(db);
-                    }
-                    for (int i = 1; i < 13; i++)
-                    {
-                        if (_bieudo1.Count(p => p.thang == i) == 0)
-                        {
-                            db.thang = i;
-                            db.tong = 0;
-                            bieudo.Add(db);
-                        }
-                    }
-                    bieudocot_khieunai.DataSource = bieudo.ToList();
+                    //List<BieuDo> bieudo = new List<BieuDo>();
+                    // var db = new BieuDo();
+                    //var _bieudo1 = _khieunaitocaoContext.bieudo_cot_donthukhieunai(dinhdanh.madonvi,int.Parse( cmb_nam_khieunai.Text)).ToList();
+                    //foreach (var item in _bieudo1)
+                    //{
+                    //    db.thang = item.thang;
+                    //    db.tong = item.tong;
+                    //    bieudo.Add(db);
+                    //}
+                    //for (int i = 1; i < 13; i++)
+                    //{
+                    //    if (_bieudo1.Count(p => p.thang == i) == 0)
+                    //    {
+                    //        db.thang = i;
+                    //        db.tong = 0;
+                    //        bieudo.Add(db);
+                    //    }
+                    //}
+                    //bieudocot_khieunai.DataSource = bieudo.ToList();
                 }
                 catch(Exception)
                 {
@@ -240,25 +247,25 @@ namespace khieunaitocao
             {
                 try
                 {
-                    List<BieuDo4> bieudo = new List<BieuDo4>();
-                    var db = new BieuDo4();
-                    var _bieudo4 = _khieunaitocaoContext.bieudo_cot_donthutocao(dinhdanh.madonvi,int.Parse(cmb_nam_khieunai.Text)).ToList();
-                    foreach (var item in _bieudo4)
-                    {
-                        db.thang = item.thang;
-                        db.tong = item.tong;
-                        bieudo.Add(db);
-                    }
-                    for (int i = 1; i < 13; i++)
-                    {
-                        if (_bieudo4.Count(p => p.thang == i) == 0)
-                        {
-                            db.thang = i;
-                            db.tong = 0;
-                            bieudo.Add(db);
-                        }
-                    }
-                    bieudocot_tocao.DataSource = bieudo.ToList();
+                    //List<BieuDo4> bieudo = new List<BieuDo4>();
+                    //var db = new BieuDo4();
+                    //var _bieudo4 = _khieunaitocaoContext.bieudo_cot_donthutocao(dinhdanh.madonvi,int.Parse(cmb_nam_khieunai.Text)).ToList();
+                    //foreach (var item in _bieudo4)
+                    //{
+                    //    db.thang = item.thang;
+                    //    db.tong = item.tong;
+                    //    bieudo.Add(db);
+                    //}
+                    //for (int i = 1; i < 13; i++)
+                    //{
+                    //    if (_bieudo4.Count(p => p.thang == i) == 0)
+                    //    {
+                    //        db.thang = i;
+                    //        db.tong = 0;
+                    //        bieudo.Add(db);
+                    //    }
+                    //}
+                    //bieudocot_tocao.DataSource = bieudo.ToList();
                 }
                 catch
                 {
@@ -358,7 +365,7 @@ namespace khieunaitocao
 
         private void bar_thongke_khieunai_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_thongkedonthu(), "Thống kê đơn thư khiếu nại");
+            LoadForm(new ctlPhanTichThongKeKhieuNai(), "Thống kê đơn thư khiếu nại");
         }
 
         private void cmb_nam_khieunai_EditValueChanged(object sender, EventArgs e)
@@ -383,17 +390,62 @@ namespace khieunaitocao
 
         private void bar_thongketocao_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_thongketocao(), "Thống kê đơn thư tố cáo");
+            LoadForm(new ctlPhanTichThongKeToCao(), "Thống kê đơn thư tố cáo");
         }
 
         private void bar_follow_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_theodoigiaiquyetkhieunai(), "Theo dõi quá trình giải quyết khiếu nại gửi đơn vị khác");
+            LoadForm(new ctlmanagedonthuAllPX05(), "Theo dõi đơn khiếu nại toàn tỉnh");
         }
 
         private void bar_theodoi_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctltheodoiquatrinhgiaiquyettocao(), "Theo dõi quá trình giải quyết tố cáo gửi đơn vị khác");
+            LoadForm(new ctlDanhMucDonThuToCao(), "In danh mục đơn tố cáo");
+        }
+
+        private void testthu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //LoadForm(new ctl_thongtinkhieunai(), "đang test cái này");
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlmanagedonthutogiac(), "Thông tin đơn tố giác");
+        }
+
+        private void barButtonItem6_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //LoadForm(new ctlPhanTichThongKeToGiac(), "Thống kê đơn thư tố cáo");
+        }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlDanhMucDonThuToGiac(), "In danh mục đơn tố giác");
+        }
+
+        private void barButtonItem8_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlmanagedonthutogiacPX05(), "Theo dõi đơn tố giác toàn tỉnh");
+        }
+
+        private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlmanagedonKNPA(), "Thông tin đơn kiến nghị, phản ánh");
+        }
+
+        private void barButtonItem12_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlPhanTichThongKeKNPA(), "Thống kê đơn kiến nghị, phản ánh");
+        }
+
+        private void barButtonItem13_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlDanhMucDonKNPA(), "In danh mục đơn khiếu nại");
+        }
+
+        private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
         }
     }
 }

@@ -43,6 +43,11 @@
             this.textBox3 = new DevExpress.XtraEditors.TextEdit();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.buttonEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkup.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkdown.Properties)).BeginInit();
@@ -50,6 +55,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBox1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonEdit1
@@ -71,7 +78,7 @@
             this.checkup.Location = new System.Drawing.Point(30, 103);
             this.checkup.Name = "checkup";
             this.checkup.Properties.Caption = "checkEdit1";
-            this.checkup.Size = new System.Drawing.Size(75, 19);
+            this.checkup.Size = new System.Drawing.Size(75, 20);
             this.checkup.TabIndex = 1;
             this.checkup.CheckedChanged += new System.EventHandler(this.checkup_CheckedChanged);
             // 
@@ -80,7 +87,7 @@
             this.checkdown.Location = new System.Drawing.Point(30, 129);
             this.checkdown.Name = "checkdown";
             this.checkdown.Properties.Caption = "checkEdit2";
-            this.checkdown.Size = new System.Drawing.Size(75, 19);
+            this.checkdown.Size = new System.Drawing.Size(75, 20);
             this.checkdown.TabIndex = 2;
             this.checkdown.CheckedChanged += new System.EventHandler(this.checkdown_CheckedChanged);
             // 
@@ -170,11 +177,49 @@
             this.simpleButton2.Text = "simpleButton2";
             this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(519, 6);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(482, 224);
+            this.gridControl1.TabIndex = 14;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
+            this.gridColumn2,
+            this.gridColumn3});
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 1;
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Name = "gridColumn3";
+            this.gridColumn3.Visible = true;
+            this.gridColumn3.VisibleIndex = 2;
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 473);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.simpleButton2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label5);
@@ -198,6 +243,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.textBox1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textBox3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,5 +267,10 @@
         private DevExpress.XtraEditors.TextEdit textBox3;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
     }
 }

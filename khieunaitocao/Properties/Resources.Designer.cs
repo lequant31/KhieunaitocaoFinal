@@ -73,6 +73,36 @@ namespace khieunaitocao.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dakirby309_Simply_Styled_Microsoft_Excel_2013 {
+            get {
+                object obj = ResourceManager.GetObject("Dakirby309-Simply-Styled-Microsoft-Excel-2013", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap email_send_receive_icon {
+            get {
+                object obj = ResourceManager.GetObject("email-send-receive-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fatcow_Farm_Fresh_Email_send_receive {
+            get {
+                object obj = ResourceManager.GetObject("Fatcow-Farm-Fresh-Email-send-receive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Mail_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("Mail-icon (1)", resourceCulture);

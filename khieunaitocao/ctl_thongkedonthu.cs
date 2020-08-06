@@ -13,7 +13,7 @@ namespace khieunaitocao
 {
     public partial class ctl_thongkedonthu : DevExpress.XtraEditors.XtraUserControl
     {
-        khieunaitocaoContextDataContext khieunaitocaoContextDataContext;
+        //khieunaitocaoContextDataContext khieunaitocaoContextDataContext;
         public ctl_thongkedonthu()
         {
             InitializeComponent();
@@ -25,11 +25,11 @@ namespace khieunaitocao
         }
         private void fun_load()
         {
-            using (khieunaitocaoContextDataContext = new khieunaitocaoContextDataContext())
-            {
-                var list=khieunaitocaoContextDataContext.thongketonghop_khieunai(date_tungay.DateTime,date_denngay.DateTime,dinhdanh.madonvi).ToList();
-                grc_thongkedonthu.DataSource = list;
-            }
+            //using (khieunaitocaoContextDataContext = new khieunaitocaoContextDataContext())
+            //{
+            //    var list=khieunaitocaoContextDataContext.thongketonghop_khieunai(date_tungay.DateTime,date_denngay.DateTime,dinhdanh.madonvi).ToList();
+            //    grc_thongkedonthu.DataSource = list;
+            //}
         }
 
         private void date_denngay_EditValueChanged(object sender, EventArgs e)

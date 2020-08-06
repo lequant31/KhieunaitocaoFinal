@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctl_quanlycanbo));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.grd_thongtincanbo = new DevExpress.XtraGrid.GridControl();
@@ -40,6 +41,7 @@
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar_themcanbo = new DevExpress.XtraBars.BarButtonItem();
@@ -75,6 +77,9 @@
             // 
             // grd_thongtincanbo
             // 
+            gridLevelNode1.RelationName = "Level1";
+            this.grd_thongtincanbo.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.grd_thongtincanbo.Location = new System.Drawing.Point(12, 12);
             this.grd_thongtincanbo.MainView = this.grv_thongtincanbo;
             this.grd_thongtincanbo.MenuManager = this.barManager1;
@@ -93,9 +98,11 @@
             this.gridColumn4,
             this.gridColumn5,
             this.gridColumn6,
-            this.gridColumn7});
+            this.gridColumn7,
+            this.gridColumn8});
             this.grv_thongtincanbo.GridControl = this.grd_thongtincanbo;
             this.grv_thongtincanbo.Name = "grv_thongtincanbo";
+            this.grv_thongtincanbo.OptionsSelection.EnableAppearanceHotTrackedRow = DevExpress.Utils.DefaultBoolean.True;
             this.grv_thongtincanbo.OptionsView.ShowGroupPanel = false;
             this.grv_thongtincanbo.DoubleClick += new System.EventHandler(this.grv_thongtincanbo_DoubleClick);
             // 
@@ -107,7 +114,7 @@
             this.gridColumn1.OptionsColumn.AllowEdit = false;
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 112;
+            this.gridColumn1.Width = 102;
             // 
             // gridColumn2
             // 
@@ -117,7 +124,7 @@
             this.gridColumn2.OptionsColumn.AllowEdit = false;
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 121;
+            this.gridColumn2.Width = 111;
             // 
             // gridColumn3
             // 
@@ -127,7 +134,7 @@
             this.gridColumn3.OptionsColumn.AllowEdit = false;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 3;
-            this.gridColumn3.Width = 97;
+            this.gridColumn3.Width = 89;
             // 
             // gridColumn4
             // 
@@ -137,7 +144,7 @@
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 96;
+            this.gridColumn4.Width = 88;
             // 
             // gridColumn5
             // 
@@ -146,8 +153,8 @@
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.OptionsColumn.AllowEdit = false;
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
-            this.gridColumn5.Width = 226;
+            this.gridColumn5.VisibleIndex = 5;
+            this.gridColumn5.Width = 200;
             // 
             // gridColumn6
             // 
@@ -155,9 +162,7 @@
             this.gridColumn6.FieldName = "quyenhan";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.OptionsColumn.AllowEdit = false;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 143;
+            this.gridColumn6.Width = 131;
             // 
             // gridColumn7
             // 
@@ -167,7 +172,16 @@
             this.gridColumn7.OptionsColumn.AllowEdit = false;
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 2;
-            this.gridColumn7.Width = 133;
+            this.gridColumn7.Width = 122;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Trạng thái";
+            this.gridColumn8.FieldName = "trangthai";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 6;
+            this.gridColumn8.Width = 78;
             // 
             // barManager1
             // 
@@ -344,5 +358,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }

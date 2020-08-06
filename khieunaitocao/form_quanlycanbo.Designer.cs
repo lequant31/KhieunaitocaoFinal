@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_quanlycanbo));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txt_sohieuCAND = new DevExpress.XtraEditors.TextEdit();
+            this.radiotrangthai = new DevExpress.XtraEditors.RadioGroup();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btn_luu = new DevExpress.XtraBars.BarButtonItem();
@@ -41,6 +41,7 @@
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.txt_sohieuCAND = new DevExpress.XtraEditors.TextEdit();
             this.radio_quyenhan = new DevExpress.XtraEditors.RadioGroup();
             this.txt_matkhau = new DevExpress.XtraEditors.TextEdit();
             this.txt_tendangnhap = new DevExpress.XtraEditors.TextEdit();
@@ -49,8 +50,6 @@
             this.com_chucvu = new DevExpress.XtraEditors.ComboBoxEdit();
             this.search_coquandonvi = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.kyhieu_donvi = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ten_donvi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -60,10 +59,14 @@
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.kyhieu_donvi = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ten_donvi = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_sohieuCAND.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radiotrangthai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sohieuCAND.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radio_quyenhan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_matkhau.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_tendangnhap.Properties)).BeginInit();
@@ -81,10 +84,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.radiotrangthai);
             this.layoutControl1.Controls.Add(this.txt_sohieuCAND);
             this.layoutControl1.Controls.Add(this.radio_quyenhan);
             this.layoutControl1.Controls.Add(this.txt_matkhau);
@@ -97,18 +102,24 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 24);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.layoutControlGroup1;
-            this.layoutControl1.Size = new System.Drawing.Size(410, 231);
+            this.layoutControl1.Size = new System.Drawing.Size(410, 264);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // txt_sohieuCAND
+            // radiotrangthai
             // 
-            this.txt_sohieuCAND.Location = new System.Drawing.Point(106, 60);
-            this.txt_sohieuCAND.MenuManager = this.barManager1;
-            this.txt_sohieuCAND.Name = "txt_sohieuCAND";
-            this.txt_sohieuCAND.Size = new System.Drawing.Size(292, 20);
-            this.txt_sohieuCAND.StyleController = this.layoutControl1;
-            this.txt_sohieuCAND.TabIndex = 3;
+            this.radiotrangthai.EditValue = true;
+            this.radiotrangthai.Location = new System.Drawing.Point(106, 218);
+            this.radiotrangthai.MenuManager = this.barManager1;
+            this.radiotrangthai.Name = "radiotrangthai";
+            this.radiotrangthai.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.radiotrangthai.Properties.Appearance.Options.UseBackColor = true;
+            this.radiotrangthai.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "Kích hoạt"),
+            new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "Khóa")});
+            this.radiotrangthai.Size = new System.Drawing.Size(292, 34);
+            this.radiotrangthai.StyleController = this.layoutControl1;
+            this.radiotrangthai.TabIndex = 10;
             // 
             // barManager1
             // 
@@ -178,7 +189,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 255);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 288);
             this.barDockControlBottom.Manager = this.barManager1;
             this.barDockControlBottom.Size = new System.Drawing.Size(410, 0);
             // 
@@ -188,7 +199,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 24);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 231);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 264);
             // 
             // barDockControlRight
             // 
@@ -196,7 +207,16 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(410, 24);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 231);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 264);
+            // 
+            // txt_sohieuCAND
+            // 
+            this.txt_sohieuCAND.Location = new System.Drawing.Point(106, 60);
+            this.txt_sohieuCAND.MenuManager = this.barManager1;
+            this.txt_sohieuCAND.Name = "txt_sohieuCAND";
+            this.txt_sohieuCAND.Size = new System.Drawing.Size(292, 20);
+            this.txt_sohieuCAND.StyleController = this.layoutControl1;
+            this.txt_sohieuCAND.TabIndex = 3;
             // 
             // radio_quyenhan
             // 
@@ -210,7 +230,7 @@
             this.radio_quyenhan.Properties.Items.AddRange(new DevExpress.XtraEditors.Controls.RadioGroupItem[] {
             new DevExpress.XtraEditors.Controls.RadioGroupItem(true, "Chỉ được xem"),
             new DevExpress.XtraEditors.Controls.RadioGroupItem(false, "Thêm, sửa, xóa")});
-            this.radio_quyenhan.Size = new System.Drawing.Size(292, 39);
+            this.radio_quyenhan.Size = new System.Drawing.Size(292, 34);
             this.radio_quyenhan.StyleController = this.layoutControl1;
             this.radio_quyenhan.TabIndex = 8;
             // 
@@ -293,31 +313,10 @@
             // 
             // searchLookUpEdit1View
             // 
-            this.searchLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.kyhieu_donvi,
-            this.ten_donvi});
             this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
-            // 
-            // kyhieu_donvi
-            // 
-            this.kyhieu_donvi.Caption = "Ký hiệu";
-            this.kyhieu_donvi.FieldName = "kyhieu_donvi";
-            this.kyhieu_donvi.Name = "kyhieu_donvi";
-            this.kyhieu_donvi.Visible = true;
-            this.kyhieu_donvi.VisibleIndex = 0;
-            this.kyhieu_donvi.Width = 90;
-            // 
-            // ten_donvi
-            // 
-            this.ten_donvi.Caption = "Tên cơ quan đơn vị";
-            this.ten_donvi.FieldName = "ten_donvi";
-            this.ten_donvi.Name = "ten_donvi";
-            this.ten_donvi.Visible = true;
-            this.ten_donvi.VisibleIndex = 1;
-            this.ten_donvi.Width = 400;
             // 
             // layoutControlGroup1
             // 
@@ -331,9 +330,10 @@
             this.layoutControlItem6,
             this.layoutControlItem7,
             this.layoutControlItem8,
-            this.layoutControlItem1});
+            this.layoutControlItem1,
+            this.layoutControlItem9});
             this.layoutControlGroup1.Name = "layoutControlGroup1";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(410, 231);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(410, 264);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlItem2
@@ -386,7 +386,7 @@
             this.layoutControlItem7.Control = this.radio_quyenhan;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 168);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(390, 43);
+            this.layoutControlItem7.Size = new System.Drawing.Size(390, 38);
             this.layoutControlItem7.Text = "Quyền hạn";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(91, 13);
             // 
@@ -408,27 +408,55 @@
             this.layoutControlItem1.Text = "Tên cơ quan đơn vị";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(91, 13);
             // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.radiotrangthai;
+            this.layoutControlItem9.Location = new System.Drawing.Point(0, 206);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(390, 38);
+            this.layoutControlItem9.Text = "Trạng thái";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(91, 13);
+            // 
+            // kyhieu_donvi
+            // 
+            this.kyhieu_donvi.Caption = "Ký hiệu";
+            this.kyhieu_donvi.FieldName = "kyhieu_donvi";
+            this.kyhieu_donvi.Name = "kyhieu_donvi";
+            this.kyhieu_donvi.Visible = true;
+            this.kyhieu_donvi.VisibleIndex = 0;
+            this.kyhieu_donvi.Width = 90;
+            // 
+            // ten_donvi
+            // 
+            this.ten_donvi.Caption = "Tên cơ quan đơn vị";
+            this.ten_donvi.FieldName = "ten_donvi";
+            this.ten_donvi.Name = "ten_donvi";
+            this.ten_donvi.Visible = true;
+            this.ten_donvi.VisibleIndex = 1;
+            this.ten_donvi.Width = 400;
+            // 
             // form_quanlycanbo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(410, 255);
+            this.ClientSize = new System.Drawing.Size(410, 288);
             this.Controls.Add(this.layoutControl1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(420, 287);
-            this.MinimumSize = new System.Drawing.Size(420, 287);
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("form_quanlycanbo.IconOptions.Icon")));
+            this.MaximumSize = new System.Drawing.Size(420, 320);
+            this.MinimumSize = new System.Drawing.Size(412, 287);
             this.Name = "form_quanlycanbo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin tài khoản";
             this.Load += new System.EventHandler(this.form_quanlycanbo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_sohieuCAND.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radiotrangthai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_sohieuCAND.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radio_quyenhan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_matkhau.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_tendangnhap.Properties)).EndInit();
@@ -446,6 +474,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,5 +512,7 @@
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraGrid.Columns.GridColumn kyhieu_donvi;
         private DevExpress.XtraGrid.Columns.GridColumn ten_donvi;
+        private DevExpress.XtraEditors.RadioGroup radiotrangthai;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
     }
 }

@@ -13,37 +13,42 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>C:\FTP Server\Update\</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
+    <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <UpdateUrl>http://18.220.41.128/</UpdateUrl>
-    <SupportUrl>http://18.220.41.128</SupportUrl>
-    <ProductName>C#.NET</ProductName>
-    <PublisherName>Lê Quân</PublisherName>
+    <InstallUrl>http://10.61.3.13/</InstallUrl>
+    <UpdateUrl>http://10.61.3.13/</UpdateUrl>
+    <SupportUrl>http://10.61.3.13/</SupportUrl>
+    <TargetCulture>en-US</TargetCulture>
+    <ProductName>Khieunaitocao</ProductName>
+    <PublisherName>LêQuân</PublisherName>
     <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
-    <ApplicationRevision>3</ApplicationRevision>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>6</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -58,7 +63,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>8E5A7DB9C93865A4998A0199E9C216CD50AEB04D</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>A3CBAD40AE5F0BF927B1FE181A4BBF97C0DC53BB</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>khieunaitocao_TemporaryKey.pfx</ManifestKeyFile>
@@ -78,57 +83,63 @@
   <PropertyGroup>
     <ApplicationIcon>Graphicloads-Android-Settings-Mail.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Dashboard.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Dashboard.v19.1.Win, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.DataAccess.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Map.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Pdf.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.TreeMap.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Xpo.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraCharts.v19.1.Wizard, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGauges.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v19.1.Presets, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGauges.v19.1.Win, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraMap.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPivotGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraPrinting.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.CodeParser.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeMap.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.BonusSkins.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dashboard.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Map.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v20.1.Export, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.TreeMap.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Presets, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v20.1.Win, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraMap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.CodeParser.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Security" />
@@ -142,25 +153,93 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctlDanhMucDonKNPA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlDanhMucDonKNPA.Designer.cs">
+      <DependentUpon>ctlDanhMucDonKNPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlDanhMucDonThuToGiac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlDanhMucDonThuToGiac.Designer.cs">
+      <DependentUpon>ctlDanhMucDonThuToGiac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlDanhMucDonThuToCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlDanhMucDonThuToCao.Designer.cs">
+      <DependentUpon>ctlDanhMucDonThuToCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlDanhMucDonThuKhieuNai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlDanhMucDonThuKhieuNai.Designer.cs">
+      <DependentUpon>ctlDanhMucDonThuKhieuNai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlmanagedonKNPAAllPX05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlmanagedonKNPAAllPX05.Designer.cs">
+      <DependentUpon>ctlmanagedonKNPAAllPX05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlmanagedonKNPA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlmanagedonKNPA.Designer.cs">
+      <DependentUpon>ctlmanagedonKNPA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlmanagedontogiacPX05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlmanagedontogiacPX05.Designer.cs">
+      <DependentUpon>ctlmanagedontogiacPX05.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlmanagedontogiac.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlmanagedontogiac.Designer.cs">
+      <DependentUpon>ctlmanagedontogiac.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlmanagedonthuAllPX05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlmanagedonthuAllPX05.Designer.cs">
+      <DependentUpon>ctlmanagedonthuAllPX05.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctlmanagedonthu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ctlmanagedonthu.Designer.cs">
       <DependentUpon>ctlmanagedonthu.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctltheodoiquatrinhgiaiquyettocao.cs">
+    <Compile Include="ctlPhanTichThongKeKNPA.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctltheodoiquatrinhgiaiquyettocao.Designer.cs">
-      <DependentUpon>ctltheodoiquatrinhgiaiquyettocao.cs</DependentUpon>
+    <Compile Include="ctlPhanTichThongKeKNPA.Designer.cs">
+      <DependentUpon>ctlPhanTichThongKeKNPA.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctlquatrinhgiaiquyettocao.cs">
+    <Compile Include="ctlPhanTichThongKeToCao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctlquatrinhgiaiquyettocao.Designer.cs">
-      <DependentUpon>ctlquatrinhgiaiquyettocao.cs</DependentUpon>
+    <Compile Include="ctlPhanTichThongKeToCao.Designer.cs">
+      <DependentUpon>ctlPhanTichThongKeToCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlPhanTichThongKeKhieuNai.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlPhanTichThongKeKhieuNai.Designer.cs">
+      <DependentUpon>ctlPhanTichThongKeKhieuNai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ctlthongtintocaoAllPX05.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctlthongtintocaoAllPX05.Designer.cs">
+      <DependentUpon>ctlthongtintocaoAllPX05.cs</DependentUpon>
     </Compile>
     <Compile Include="ctlthongtintocao.cs">
       <SubType>UserControl</SubType>
@@ -174,18 +253,6 @@
     <Compile Include="ctl_quanlycanbo.Designer.cs">
       <DependentUpon>ctl_quanlycanbo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctl_theodoigiaiquyetkhieunai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ctl_theodoigiaiquyetkhieunai.Designer.cs">
-      <DependentUpon>ctl_theodoigiaiquyetkhieunai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ctl_quatrinhgiaiquyetkhieunai.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ctl_quatrinhgiaiquyetkhieunai.Designer.cs">
-      <DependentUpon>ctl_quatrinhgiaiquyetkhieunai.cs</DependentUpon>
-    </Compile>
     <Compile Include="ctl_thongkedonthu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -198,42 +265,34 @@
     <Compile Include="ctl_thongketocao.Designer.cs">
       <DependentUpon>ctl_thongketocao.cs</DependentUpon>
     </Compile>
-    <Compile Include="dinhdanh.cs" />
-    <Compile Include="form_chuyendonvikhac.cs">
+    <Compile Include="form_thongtintogiac.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_chuyendonvikhac.Designer.cs">
-      <DependentUpon>form_chuyendonvikhac.cs</DependentUpon>
+    <Compile Include="form_thongtintogiac.Designer.cs">
+      <DependentUpon>form_thongtintogiac.cs</DependentUpon>
     </Compile>
+    <Compile Include="khieunaitocaoContext.cs">
+      <DependentUpon>khieunaitocaoContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="form_thongtinkiennghiphananh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_thongtinkiennghiphananh.Designer.cs">
+      <DependentUpon>form_thongtinkiennghiphananh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="thongtindonthucanhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="thongtindonthucanhan.Designer.cs">
+      <DependentUpon>thongtindonthucanhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="toxacminh.cs" />
+    <Compile Include="dinhdanh.cs" />
     <Compile Include="form_quanlycanbo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form_quanlycanbo.Designer.cs">
       <DependentUpon>form_quanlycanbo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form_theodoiquatrinhgiaiquyettocao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form_theodoiquatrinhgiaiquyettocao.Designer.cs">
-      <DependentUpon>form_theodoiquatrinhgiaiquyettocao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form_theodoiquatrinhgiaiquyetkhieunai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form_theodoiquatrinhgiaiquyetkhieunai.Designer.cs">
-      <DependentUpon>form_theodoiquatrinhgiaiquyetkhieunai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form_quatrinhgiaiquyetkhieunai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form_quatrinhgiaiquyetkhieunai.Designer.cs">
-      <DependentUpon>form_quatrinhgiaiquyetkhieunai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="form_quatrinhgiaiquyettocao.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="form_quatrinhgiaiquyettocao.Designer.cs">
-      <DependentUpon>form_quatrinhgiaiquyettocao.cs</DependentUpon>
     </Compile>
     <Compile Include="form_thaydoimatkhau.cs">
       <SubType>Form</SubType>
@@ -262,14 +321,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>khieunaitocaoContext.dbml</DependentUpon>
     </Compile>
-    <Compile Include="khieunaitocaoDataSet.cs">
-      <DependentUpon>khieunaitocaoDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="khieunaitocaoDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>khieunaitocaoDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="mahoa.cs" />
     <Compile Include="phanquyen.cs" />
     <Compile Include="Program.cs" />
@@ -286,21 +337,48 @@
     <Compile Include="test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
-    <Compile Include="thongtindonthucanhan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="thongtindonthucanhan.Designer.cs">
-      <DependentUpon>thongtindonthucanhan.cs</DependentUpon>
-    </Compile>
     <Compile Include="VietnameseSigns.cs" />
+    <EmbeddedResource Include="ctlDanhMucDonKNPA.resx">
+      <DependentUpon>ctlDanhMucDonKNPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlDanhMucDonThuToGiac.resx">
+      <DependentUpon>ctlDanhMucDonThuToGiac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlDanhMucDonThuToCao.resx">
+      <DependentUpon>ctlDanhMucDonThuToCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlDanhMucDonThuKhieuNai.resx">
+      <DependentUpon>ctlDanhMucDonThuKhieuNai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlmanagedonKNPAAllPX05.resx">
+      <DependentUpon>ctlmanagedonKNPAAllPX05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlmanagedonKNPA.resx">
+      <DependentUpon>ctlmanagedonKNPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlmanagedontogiacPX05.resx">
+      <DependentUpon>ctlmanagedontogiacPX05.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlmanagedontogiac.resx">
+      <DependentUpon>ctlmanagedontogiac.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlmanagedonthuAllPX05.resx">
+      <DependentUpon>ctlmanagedonthuAllPX05.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctlmanagedonthu.resx">
       <DependentUpon>ctlmanagedonthu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctltheodoiquatrinhgiaiquyettocao.resx">
-      <DependentUpon>ctltheodoiquatrinhgiaiquyettocao.cs</DependentUpon>
+    <EmbeddedResource Include="ctlPhanTichThongKeKNPA.resx">
+      <DependentUpon>ctlPhanTichThongKeKNPA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctlquatrinhgiaiquyettocao.resx">
-      <DependentUpon>ctlquatrinhgiaiquyettocao.cs</DependentUpon>
+    <EmbeddedResource Include="ctlPhanTichThongKeToCao.resx">
+      <DependentUpon>ctlPhanTichThongKeToCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlPhanTichThongKeKhieuNai.resx">
+      <DependentUpon>ctlPhanTichThongKeKhieuNai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlthongtintocaoAllPX05.resx">
+      <DependentUpon>ctlthongtintocaoAllPX05.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctlthongtintocao.resx">
       <DependentUpon>ctlthongtintocao.cs</DependentUpon>
@@ -308,38 +386,20 @@
     <EmbeddedResource Include="ctl_quanlycanbo.resx">
       <DependentUpon>ctl_quanlycanbo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ctl_theodoigiaiquyetkhieunai.resx">
-      <DependentUpon>ctl_theodoigiaiquyetkhieunai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ctl_quatrinhgiaiquyetkhieunai.resx">
-      <DependentUpon>ctl_quatrinhgiaiquyetkhieunai.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ctl_thongkedonthu.resx">
       <DependentUpon>ctl_thongkedonthu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctl_thongketocao.resx">
       <DependentUpon>ctl_thongketocao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_chuyendonvikhac.resx">
-      <DependentUpon>form_chuyendonvikhac.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="form_quanlycanbo.resx">
       <DependentUpon>form_quanlycanbo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_theodoiquatrinhgiaiquyettocao.resx">
-      <DependentUpon>form_theodoiquatrinhgiaiquyettocao.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form_theodoiquatrinhgiaiquyetkhieunai.resx">
-      <DependentUpon>form_theodoiquatrinhgiaiquyetkhieunai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form_quatrinhgiaiquyetkhieunai.resx">
-      <DependentUpon>form_quatrinhgiaiquyetkhieunai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="form_quatrinhgiaiquyettocao.resx">
-      <DependentUpon>form_quatrinhgiaiquyettocao.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="form_thaydoimatkhau.resx">
       <DependentUpon>form_thaydoimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_thongtintogiac.resx">
+      <DependentUpon>form_thongtintogiac.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form_thongtintocao.resx">
       <DependentUpon>form_thongtintocao.cs</DependentUpon>
@@ -364,6 +424,9 @@
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form_thongtinkiennghiphananh.resx">
+      <DependentUpon>form_thongtinkiennghiphananh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="thongtindonthucanhan.resx">
       <DependentUpon>thongtindonthucanhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -374,17 +437,6 @@
     </None>
     <None Include="khieunaitocaoContext.dbml.layout">
       <DependentUpon>khieunaitocaoContext.dbml</DependentUpon>
-    </None>
-    <None Include="khieunaitocaoDataSet.xsc">
-      <DependentUpon>khieunaitocaoDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="khieunaitocaoDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>khieunaitocaoDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="khieunaitocaoDataSet.xss">
-      <DependentUpon>khieunaitocaoDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
@@ -441,8 +493,432 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Graphicloads-Android-Settings-Mail.ico" />
-    <Content Include="mail.png" />
+    <None Include="Resources\Fatcow-Farm-Fresh-Email-send-receive.ico" />
+    <None Include="Resources\email-send-receive-icon.png" />
+    <None Include="Resources\Dakirby309-Simply-Styled-Microsoft-Excel-2013.ico" />
     <Content Include="Resources\mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DevExpress.BonusSkins.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Charts.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.CodeParser.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Dashboard.v20.1.Win">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Data.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.DataAccess.v20.1.UI">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Diagram.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Images.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Map.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Office.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Pdf.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.PivotGrid.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Printing.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.RichEdit.v20.1.Export">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Sparkline.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.TreeMap.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Utils.v20.1.UI">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.Xpo.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraBars.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v20.1.UI">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraCharts.v20.1.Wizard">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraDiagram.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraEditors.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v20.1.Core">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v20.1.Presets">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGauges.v20.1.Win">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraGrid.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraLayout.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraMap.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraNavBar.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPivotGrid.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraPrinting.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraReports.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraRichEdit.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeList.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraTreeMap.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="DevExpress.XtraVerticalGrid.v20.1">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

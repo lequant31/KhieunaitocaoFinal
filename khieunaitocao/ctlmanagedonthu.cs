@@ -20,9 +20,31 @@ namespace khieunaitocao
         {
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
-                var listtest = _khieunaitocaoContext.listtbthongtinkhieunai(dinhdanh.madonvi, year).ToList();
+                if (dinhdanh.tenquyenhan == "Staff")
+                {
+                    var list = _khieunaitocaoContext.ListThongTinKhieuNai(dinhdanh.madonvi, dinhdanh.ma_canbo, dinhdanh.ma_canbo).ToList();
+                    grc_quanlydonthukhieunai.DataSource = list;
+                }
+                if (dinhdanh.tenquyenhan == "Boss")
+                {
+                    var list = _khieunaitocaoContext.ListThongTinKhieuNaiBoss(dinhdanh.madonvi).ToList();
+                    grc_quanlydonthukhieunai.DataSource = list;
+                }
+                //    var ls1= (from thongtinkhieunai in _khieunaitocaoContext.tb_thongtinkhieunais
 
-                grc_quanlydonthukhieunai.DataSource = listtest;
+                //                    where _khieunaitocaoContext.relation_donvi_thongtinkhieunais.Any(x=>x.id_donvi==dinhdanh.madonvi)
+                //                    where _khieunaitocaoContext.tb_toxacminhs.Any(x=>x.id_canbochiensy==dinhdanh.ma_canbo)
+                //                    select thongtinkhieunai
+                //                    ).ToList();
+                //    var ls2 = (from thongtinkhieunai in _khieunaitocaoContext.tb_thongtinkhieunais
+
+                //               where _khieunaitocaoContext.relation_donvi_thongtinkhieunais.Any(x => x.id_donvi == dinhdanh.madonvi)
+                //               where thongtinkhieunai.ketthucdonthu == true
+                //                              select thongtinkhieunai
+                //                ).ToList();
+                //    ls1.Union(ls2).Distinct().ToList();
+
+                //grv_quanlydonthukhieunai.BestFitColumns();
             }
         }
 
@@ -51,18 +73,7 @@ namespace khieunaitocao
             {
                 int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
 
-                #region check edit
-
-                using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
-                {
-                    var _edit = _khieunaitocaoContext.check_xoadonthu(i).ToList();
-                    if (_edit.Count() != 0)
-                    {
-                        XtraMessageBox.Show("Không được sửa nội dung đơn thư này");
-                    }
-                }
-
-                #endregion check edit
+               
 
                 thongtindonthucanhan f = new thongtindonthucanhan
                 {
@@ -105,6 +116,7 @@ namespace khieunaitocao
         private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check permission
+
             var indexs = grv_quanlydonthukhieunai.GetSelectedRows();
             if (indexs[0] < 0)
             {
@@ -123,21 +135,14 @@ namespace khieunaitocao
                 return;
             }
             int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
-            string madongthu= grv_quanlydonthukhieunai.GetFocusedRowCellValue("ma_donthu_khieunai").ToString();
-            using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
-            {
-                var _edit = _khieunaitocaoContext.check_xoadonthu(i).ToList();
-                if (_edit.Count() != 0)
-                {
-                    XtraMessageBox.Show("Không được xóa đơn thư này");
-                    return;
-                }
-            }
+            string madongthu = grv_quanlydonthukhieunai.GetFocusedRowCellValue("ma_donthu_khieunai").ToString();
+            
             if (madongthu.Substring(0, 4) != dinhdanh.kyhieu_donvi)
             {
                 XtraMessageBox.Show("Không được quyền xóa");
                 return;
             }
+
             #endregion check permission
 
             try
@@ -145,42 +150,24 @@ namespace khieunaitocao
                 int a = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
                 using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
                 {
-                    var del = _khieunaitocaoContext.tb_thongtinkhieunais.Single(p => p.id_thongtinhieunai == a);
-                    if (MessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
+                    if (XtraMessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
                      DialogResult.Yes)
                         return;
-                    _khieunaitocaoContext.tb_thongtinkhieunais.DeleteOnSubmit(del);
-                    _khieunaitocaoContext.SubmitChanges();
+                    _khieunaitocaoContext.XoaThongTinKhieuNai(a, dinhdanh.madonvi);
+
                     grv_quanlydonthukhieunai.DeleteSelectedRows();
-                    MessageBox.Show("Xóa thông tin thành công");
+                    XtraMessageBox.Show("Xóa thông tin thành công");
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Xóa thông tin thất bại");
-                //throw;
-            }
-        }
-
-        private void bar_quatrinhgiaiquyet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            thongtindonthucanhan f = new thongtindonthucanhan();
-            try
-            {
-                int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
-                f.bool_chuyen = true;
-                f.id_thongtinKN = i;
-                f.ShowDialog();
-            }
-            catch (Exception)
-            {
-                throw;
-                //XtraMessageBox.Show("Vui lòng chọn đơn thư cần chuyển");
+                XtraMessageBox.Show("Xóa thông tin thất bại");
             }
         }
 
         private void grv_quanlydonthukhieunai_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
+            grv_quanlydonthukhieunai.IndicatorWidth = 40;
             if (e.Info.IsRowIndicator && e.RowHandle >= 0)
             {
                 e.Info.DisplayText = (e.RowHandle + 1).ToString();
@@ -189,8 +176,39 @@ namespace khieunaitocao
 
         private void bar_year_EditValueChanged(object sender, EventArgs e)
         {
-            year = Convert.ToInt32(bar_year.EditValue);
-            donthu_load();
+            //year = Convert.ToInt32(bar_year.EditValue);
+            //donthu_load();
+        }
+
+        private void btn_chuyendon_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            try
+            {
+                int a1 = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
+                int a2 = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("donvinhan");
+                string a = grv_quanlydonthukhieunai.GetFocusedRowCellValue("hinhthuc_xuly").ToString();
+                string b = grv_quanlydonthukhieunai.GetFocusedRowCellValue("forward").ToString();
+                string c = grv_quanlydonthukhieunai.GetFocusedRowCellValue("ma_donthu_khieunai").ToString().Substring(0, 4);
+                bool d = (bool)grv_quanlydonthukhieunai.GetFocusedRowCellValue("ketthucdonthu");
+                if (a == "Chuyển đơn vị khác" & b == "Chưa chuyển" & c == dinhdanh.kyhieu_donvi & a2 != 0 & d == false)
+                {
+                    using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
+                    {
+                        _khieunaitocaoContext.ChuyenThongTinKhieuNai(a1, dinhdanh.madonvi, a2, "Sub");
+                    }
+                    XtraMessageBox.Show("Chuyển đơn thư thành công.");
+                    donthu_load();
+                }
+                else
+                {
+                    XtraMessageBox.Show("Đơn thư không thể chuyển cho đơn vị khác.");
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show("Thông báo lỗi", ex.Message);
+            }
         }
     }
 }

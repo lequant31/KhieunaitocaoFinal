@@ -15,5 +15,6 @@ namespace khieunaitocao
         public static int quyenhan;
         public static string tencanbo;
         public static string password;
+        public static string tenquyenhan;
     }
 }

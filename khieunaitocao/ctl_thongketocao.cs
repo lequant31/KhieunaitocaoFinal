@@ -12,18 +12,18 @@ namespace khieunaitocao
 {
     public partial class ctl_thongketocao : UserControl
     {
-        khieunaitocaoContextDataContext khieunaitocaoContextDataContext;
+        //khieunaitocaoContextDataContext khieunaitocaoContextDataContext;
         public ctl_thongketocao()
         {
             InitializeComponent();
         }
         private void fun_load()
         {
-            using (khieunaitocaoContextDataContext = new khieunaitocaoContextDataContext())
-            {
-                var list = khieunaitocaoContextDataContext.thongketonghop_tocao(date_tungay.DateTime, date_denngay.DateTime, dinhdanh.madonvi).ToList();
-                grc_thongketocao.DataSource = list;
-            }
+            //using (khieunaitocaoContextDataContext = new khieunaitocaoContextDataContext())
+            //{
+            //    var list = khieunaitocaoContextDataContext.thongketonghop_tocao(date_tungay.DateTime, date_denngay.DateTime, dinhdanh.madonvi).ToList();
+            //    grc_thongketocao.DataSource = list;
+            //}
         }
 
         private void date_tungay_EditValueChanged(object sender, EventArgs e)

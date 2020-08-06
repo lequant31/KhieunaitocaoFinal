@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.29827.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "khieunaitocao", "khieunaitocao\khieunaitocao.csproj", "{A8053EEA-20C4-493E-8F5D-7D48C36DE3EC}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "khieunaitocao_demo", "khieunaitocao_demo\khieunaitocao_demo.vdproj", "{9260A17B-6F82-4C82-9C0F-C0EB26681671}"
-EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "review khieunaitocao", "review khieunaitocao\review khieunaitocao.vdproj", "{12219045-BE1E-4F80-815A-5D6AD24053CA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,12 +15,6 @@ Global
 		{A8053EEA-20C4-493E-8F5D-7D48C36DE3EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8053EEA-20C4-493E-8F5D-7D48C36DE3EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8053EEA-20C4-493E-8F5D-7D48C36DE3EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9260A17B-6F82-4C82-9C0F-C0EB26681671}.Debug|Any CPU.ActiveCfg = Debug
-		{9260A17B-6F82-4C82-9C0F-C0EB26681671}.Debug|Any CPU.Build.0 = Debug
-		{9260A17B-6F82-4C82-9C0F-C0EB26681671}.Release|Any CPU.ActiveCfg = Release
-		{9260A17B-6F82-4C82-9C0F-C0EB26681671}.Release|Any CPU.Build.0 = Release
-		{12219045-BE1E-4F80-815A-5D6AD24053CA}.Debug|Any CPU.ActiveCfg = Debug
-		{12219045-BE1E-4F80-815A-5D6AD24053CA}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -17,7 +17,7 @@ namespace khieunaitocao
         public bool bool_sua = false;
         public int _macanbo;
         private int quyen_han = 0;
-
+        private string tenquyenhan = "";
         private void fun_null()
         {
             bool_sua = false;
@@ -95,6 +95,14 @@ namespace khieunaitocao
 
                     var _mk = mh.EncryptString(txt_matkhau.Text, "lamgico");
                     int _madonvi = Convert.ToInt16(search_coquandonvi.EditValue);
+                    if(com_chucvu.Text=="Trưởng phòng" || com_chucvu.Text=="Phó trưởng phòng")
+                    {
+                        tenquyenhan = "Boss";
+                    }
+                    else
+                    {
+                        tenquyenhan = "Staff";
+                    }
                     if (radio_quyenhan.SelectedIndex == 0)
                     {
                         quyen_han = 2;
@@ -105,11 +113,11 @@ namespace khieunaitocao
                     }
                     if (bool_sua == false)
                     {
-                        _khieunaitocaoContext.them_canbo(_madonvi, Int32.Parse(txt_sohieuCAND.Text), txt_hoten.Text, txt_tendangnhap.Text, _mk, com_capbac.Text, com_chucvu.Text, quyen_han);
+                        _khieunaitocaoContext.them_canbo(_madonvi, Int32.Parse(txt_sohieuCAND.Text), txt_hoten.Text, txt_tendangnhap.Text, _mk, com_capbac.Text, com_chucvu.Text,tenquyenhan, quyen_han,(bool)radiotrangthai.EditValue);
                     }
                     else
                     {
-                        _khieunaitocaoContext.sua_canbo(_madonvi, _macanbo, txt_sohieuCAND.Text, txt_hoten.Text, txt_tendangnhap.Text, _mk, com_capbac.Text, com_chucvu.Text, quyen_han);
+                        _khieunaitocaoContext.sua_canbo(_madonvi, _macanbo, txt_sohieuCAND.Text, txt_hoten.Text, txt_tendangnhap.Text, _mk, com_capbac.Text, com_chucvu.Text,tenquyenhan, quyen_han, (bool)radiotrangthai.EditValue);
                     }
                     XtraMessageBox.Show("Lưu thông tin thành công");
                 }
@@ -160,6 +168,11 @@ namespace khieunaitocao
                 {
                     radio_quyenhan.SelectedIndex = 0;
                 }
+                if (sua.trangthai == true)
+                {
+                    radiotrangthai.SelectedIndex = 0;
+                }
+                else radiotrangthai.SelectedIndex = 1;
             }
         }
 

@@ -72,7 +72,7 @@
             this.check_rememberme.Location = new System.Drawing.Point(103, 100);
             this.check_rememberme.Name = "check_rememberme";
             this.check_rememberme.Properties.Caption = "Ghi nhớ";
-            this.check_rememberme.Size = new System.Drawing.Size(101, 19);
+            this.check_rememberme.Size = new System.Drawing.Size(101, 20);
             this.check_rememberme.TabIndex = 8;
             // 
             // btn_huydangnhap
@@ -176,7 +176,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(345, 173);
             this.Controls.Add(this.panel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconOptions.Icon = ((System.Drawing.Icon)(resources.GetObject("frm_dangnhap.IconOptions.Icon")));
             this.Name = "frm_dangnhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
