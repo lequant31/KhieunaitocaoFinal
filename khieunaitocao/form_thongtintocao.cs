@@ -527,7 +527,7 @@ namespace khieunaitocao
             if (date_ngay_ketthuc.EditValue != null)
             {
                 Re_sua = false;
-                //Re_xoa = false;
+                Re_xoa = true;
                 XtraMessageBox.Show("Không thể sửa xóa khi đã kết thúc");
             }
         }
@@ -542,6 +542,26 @@ namespace khieunaitocao
             if (rdb_dieukien_xuly.SelectedIndex == 1)
             {
                 combo_lydokhongdudieukien_xuly.ReadOnly = false;
+            }
+        }
+
+        private void txt_songay_giaiquyet_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_songay_giaiquyet.Text) && date_tungay_giaiquyet.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_giaiquyet.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_giaiquyet.EditValue;
+                date_denngay_giaiquyet.EditValue = dateTime.AddDays(int.Parse(txt_songay_giaiquyet.Text));
+            }
+        }
+
+        private void date_tungay_giaiquyet_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_songay_giaiquyet.Text) && date_tungay_giaiquyet.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_giaiquyet.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_giaiquyet.EditValue;
+                date_denngay_giaiquyet.EditValue = dateTime.AddDays(int.Parse(txt_songay_giaiquyet.Text));
             }
         }
     }

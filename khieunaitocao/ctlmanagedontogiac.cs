@@ -30,21 +30,7 @@ namespace khieunaitocao
                     var list = _khieunaitocaoContext.ListThongTinToGiacBoss(dinhdanh.madonvi).ToList();
                     grc_quanlydontogiac.DataSource = list;
                 }
-                //    var ls1= (from thongtinkhieunai in _khieunaitocaoContext.tb_thongtinkhieunais
 
-                //                    where _khieunaitocaoContext.relation_donvi_thongtinkhieunais.Any(x=>x.id_donvi==dinhdanh.madonvi)
-                //                    where _khieunaitocaoContext.tb_toxacminhs.Any(x=>x.id_canbochiensy==dinhdanh.ma_canbo)
-                //                    select thongtinkhieunai
-                //                    ).ToList();
-                //    var ls2 = (from thongtinkhieunai in _khieunaitocaoContext.tb_thongtinkhieunais
-
-                //               where _khieunaitocaoContext.relation_donvi_thongtinkhieunais.Any(x => x.id_donvi == dinhdanh.madonvi)
-                //               where thongtinkhieunai.ketthucdonthu == true
-                //                              select thongtinkhieunai
-                //                ).ToList();
-                //    ls1.Union(ls2).Distinct().ToList();
-
-                //grv_quanlydonthukhieunai.BestFitColumns();
             }
         }
 

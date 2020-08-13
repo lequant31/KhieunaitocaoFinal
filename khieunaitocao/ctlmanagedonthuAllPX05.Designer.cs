@@ -230,6 +230,7 @@
             this.grv_quanlydonthukhieunai.OptionsView.ShowFooter = true;
             this.grv_quanlydonthukhieunai.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
             this.grv_quanlydonthukhieunai.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grv_quanlydonthukhieunai_CustomDrawRowIndicator);
+            this.grv_quanlydonthukhieunai.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grv_quanlydonthukhieunai_RowStyle);
             this.grv_quanlydonthukhieunai.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.grv_quanlydonthukhieunai_CustomUnboundColumnData);
             this.grv_quanlydonthukhieunai.PrintInitialize += new DevExpress.XtraGrid.Views.Base.PrintInitializeEventHandler(this.grv_quanlydonthukhieunai_PrintInitialize);
             // 

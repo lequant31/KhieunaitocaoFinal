@@ -30,21 +30,7 @@ namespace khieunaitocao
                     var list = _khieunaitocaoContext.ListThongTinKhieuNaiBoss(dinhdanh.madonvi).ToList();
                     grc_quanlydonthukhieunai.DataSource = list;
                 }
-                //    var ls1= (from thongtinkhieunai in _khieunaitocaoContext.tb_thongtinkhieunais
-
-                //                    where _khieunaitocaoContext.relation_donvi_thongtinkhieunais.Any(x=>x.id_donvi==dinhdanh.madonvi)
-                //                    where _khieunaitocaoContext.tb_toxacminhs.Any(x=>x.id_canbochiensy==dinhdanh.ma_canbo)
-                //                    select thongtinkhieunai
-                //                    ).ToList();
-                //    var ls2 = (from thongtinkhieunai in _khieunaitocaoContext.tb_thongtinkhieunais
-
-                //               where _khieunaitocaoContext.relation_donvi_thongtinkhieunais.Any(x => x.id_donvi == dinhdanh.madonvi)
-                //               where thongtinkhieunai.ketthucdonthu == true
-                //                              select thongtinkhieunai
-                //                ).ToList();
-                //    ls1.Union(ls2).Distinct().ToList();
-
-                //grv_quanlydonthukhieunai.BestFitColumns();
+               
             }
         }
 
@@ -72,9 +58,6 @@ namespace khieunaitocao
             try
             {
                 int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
-
-               
-
                 thongtindonthucanhan f = new thongtindonthucanhan
                 {
                     bool_sua = true,
@@ -91,23 +74,23 @@ namespace khieunaitocao
 
         private void grv_quanlydonthukhieunai_DoubleClick(object sender, EventArgs e)
         {
-            thongtindonthucanhan f = new thongtindonthucanhan
-            {
-                bool_sua = true
-            };
             try
             {
                 int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
-                f.id_thongtinKN = i;
+                thongtindonthucanhan f = new thongtindonthucanhan
+                {
+                    bool_sua = true,
+
+                    id_thongtinKN = i
+                };
                 f.ShowDialog();
             }
             catch (Exception)
             {
-                //throw;
                 XtraMessageBox.Show("Vui lòng chọn đơn thư cần sửa");
             }
         }
-
+       
         private void bar_btn_refresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             donthu_load();

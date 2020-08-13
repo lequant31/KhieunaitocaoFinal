@@ -578,7 +578,7 @@ namespace khieunaitocao
             if (date_ketthuc.EditValue != null)
             {
                 Re_sua = false;
-                //Re_xoa = false;
+                Re_xoa = true;
                 XtraMessageBox.Show("Không thể sửa xóa khi đã kết thúc");
             }
         }
@@ -604,5 +604,24 @@ namespace khieunaitocao
             }
         }
 
+        private void txt_songay_kehoach_xacminh_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_songay_kehoach_xacminh.Text) && date_tungay_kehoach_xacminh.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_kehoach_xacminh.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_kehoach_xacminh.EditValue;
+                date_denngay_kehoach_xacminh.EditValue = dateTime.AddDays(int.Parse(date_tungay_kehoach_xacminh.Text));
+            }
+        }
+
+        private void date_tungay_kehoach_xacminh_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_songay_kehoach_xacminh.Text) && date_tungay_kehoach_xacminh.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_kehoach_xacminh.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_kehoach_xacminh.EditValue;
+                date_denngay_kehoach_xacminh.EditValue = dateTime.AddDays(int.Parse(date_tungay_kehoach_xacminh.Text));
+            }
+        }
     }
 }

@@ -409,6 +409,7 @@
             this.grv_thongtintocao.OptionsView.RowAutoHeight = true;
             this.grv_thongtintocao.OptionsView.ShowAutoFilterRow = true;
             this.grv_thongtintocao.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
+            this.grv_thongtintocao.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grv_thongtintocao_RowStyle);
             this.grv_thongtintocao.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.grv_thongtintocao_CustomUnboundColumnData);
             this.grv_thongtintocao.PrintInitialize += new DevExpress.XtraGrid.Views.Base.PrintInitializeEventHandler(this.grv_thongtintocao_PrintInitialize);
             // 
@@ -444,7 +445,7 @@
             // gridColumn57
             // 
             this.gridColumn57.Caption = "Kết thúc đơn";
-            this.gridColumn57.FieldName = "kethucdon";
+            this.gridColumn57.FieldName = "ketthucdon";
             this.gridColumn57.Name = "gridColumn57";
             this.gridColumn57.OptionsColumn.AllowEdit = false;
             this.gridColumn57.Visible = true;

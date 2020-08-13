@@ -445,7 +445,12 @@ namespace khieunaitocao
 
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
+            LoadForm(new ctlmanagedonKNPAAllPX05(), "Theo dõi đơn kiến nghị phản ánh toàn tỉnh");
+        }
 
+        private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            LoadForm(new ctlDanhMucDonThuTongHop(), "Tổng hợp danh mục đơn");
         }
     }
 }

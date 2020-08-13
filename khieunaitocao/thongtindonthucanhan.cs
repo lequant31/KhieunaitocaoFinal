@@ -137,6 +137,8 @@ namespace khieunaitocao
             com_cancu_ketluan_noidung_khieunai.Text = null;
             com_danhgiaviecqd.Text = null;
             txt_nguoi_pheduyet_baocao_ketqua_xacminh.Text = null;
+            date_tungay_giaiquyet.EditValue = null;
+            date_denngay_giaiquyet.EditValue = null;
         }
 
         private void thongtin_addnew()
@@ -227,6 +229,8 @@ namespace khieunaitocao
             txt_so_thongbao.EditValue = _list_thongtindonthu.so_thongbao;
             date_ngay_thongbao.EditValue = _list_thongtindonthu.ngay_thongbao;
             txt_thoihan_giaiquyet_khieunai.EditValue = _list_thongtindonthu.thoihan_giaiquyet_khieunai;
+            date_tungay_giaiquyet.EditValue = _list_thongtindonthu.tungay_giaiquyet;
+            date_denngay_giaiquyet.EditValue = _list_thongtindonthu.denngay_giaiquyet;
             txt_so_kehoach_xacminh.EditValue = _list_thongtindonthu.so_kehoach_xacminh;
             txt_nguoi_ky_kehoach_xacminh.EditValue = _list_thongtindonthu.nguoi_ky_kehoach_xacminh;
             txt_nguoi_pheduyet_kehoach_xacminh.EditValue = _list_thongtindonthu.nguoi_pheduyet_kehoach_xacminh;
@@ -361,6 +365,8 @@ namespace khieunaitocao
                 objKN.so_thongbao = txt_so_thongbao.Text;
                 objKN.ngay_thongbao = (DateTime?)date_ngay_thongbao.EditValue;
                 objKN.thoihan_giaiquyet_khieunai = txt_thoihan_giaiquyet_khieunai.Text;
+                objKN.tungay_giaiquyet = (DateTime?)date_tungay_giaiquyet.EditValue;
+                objKN.denngay_giaiquyet = (DateTime?)date_denngay_giaiquyet.EditValue;
                 objKN.so_kehoach_xacminh = txt_so_kehoach_xacminh.Text;
                 objKN.nguoi_pheduyet_kehoach_xacminh = txt_nguoi_pheduyet_kehoach_xacminh.Text;
                 objKN.nguoi_ky_kehoach_xacminh = txt_nguoi_ky_kehoach_xacminh.Text;
@@ -526,7 +532,7 @@ namespace khieunaitocao
                 XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép xóa");
                 return;
             }
-            
+
             if (txt_madonthu.Text.Substring(0, 4) != dinhdanh.kyhieu_donvi)
             {
                 XtraMessageBox.Show("Không được quyền xóa");
@@ -612,7 +618,9 @@ namespace khieunaitocao
         {
             if (date_ketthuc.EditValue != null)
             {
-                Re_xoa = false;
+
+                Re_sua = false;
+                Re_xoa = true;
                 XtraMessageBox.Show("Không thể sửa xóa khi đã kết thúc");
             }
         }
@@ -638,5 +646,24 @@ namespace khieunaitocao
             }
         }
 
+        private void txt_thoihan_giaiquyet_khieunai_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_thoihan_giaiquyet_khieunai.Text) && date_tungay_giaiquyet.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_giaiquyet.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_giaiquyet.EditValue;
+                date_denngay_giaiquyet.EditValue = dateTime.AddDays(int.Parse(txt_thoihan_giaiquyet_khieunai.Text));
+            }
+        }
+
+        private void date_tungay_giaiquyet_EditValueChanged(object sender, EventArgs e)
+        {
+            if (date_tungay_giaiquyet.EditValue != null && !string.IsNullOrEmpty(txt_thoihan_giaiquyet_khieunai.Text))
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_giaiquyet.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_giaiquyet.EditValue;
+                date_denngay_giaiquyet.EditValue = dateTime.AddDays(int.Parse(txt_thoihan_giaiquyet_khieunai.Text));
+            }
+        }
     }
 }

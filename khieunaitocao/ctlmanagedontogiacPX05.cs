@@ -2,6 +2,7 @@
 using DevExpress.XtraEditors;
 using DevExpress.XtraPrinting;
 using System;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -116,6 +117,56 @@ namespace khieunaitocao
         private void btnExportExcel_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             ExportExcel("");
+        }
+
+        private void grv_quanlydontogiac_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        {
+            if (e.RowHandle >= 0)
+            {
+                var priority = grv_quanlydontogiac.GetRowCellDisplayText(e.RowHandle, grv_quanlydontogiac.Columns["ketthucdon"]);
+                var date_denngay_giaiquyet = grv_quanlydontogiac.GetRowCellValue(e.RowHandle, grv_quanlydontogiac.Columns["denngay_giaiquyet"]);
+                var date_ngay_ketthuc = grv_quanlydontogiac.GetRowCellValue(e.RowHandle, grv_quanlydontogiac.Columns["ngay_kethuc"]);
+
+                if (priority == "Checked")
+                {
+                    if (date_denngay_giaiquyet == null)
+                    {
+                        e.Appearance.BackColor = Color.Goldenrod;
+                        e.HighPriority = true;
+                    }
+                    else
+                    {
+                        TimeSpan timeSpan = Convert.ToDateTime(date_ngay_ketthuc) - Convert.ToDateTime(date_denngay_giaiquyet);
+                        if (timeSpan.Days <= 0)
+                        {
+                            e.Appearance.BackColor = Color.BlueViolet;
+                            e.HighPriority = true;
+                        }
+                        else
+                        {
+                            e.Appearance.BackColor = Color.PaleVioletRed;
+                            e.HighPriority = true;
+                        }
+                    }
+                }
+                if (priority == "Uncheck")
+                {
+                    if (date_denngay_giaiquyet == null)
+                    {
+                        e.Appearance.BackColor = Color.Goldenrod;
+                        e.HighPriority = true;
+                    }
+                    else
+                    {
+                        TimeSpan timeSpan = DateTime.Now - Convert.ToDateTime(date_denngay_giaiquyet);
+                        if (timeSpan.Days > 0)
+                        {
+                            e.Appearance.BackColor = Color.BlueViolet;
+                            e.HighPriority = true;
+                        }
+                    }
+                }
+            }
         }
     }
 }

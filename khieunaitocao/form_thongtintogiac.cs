@@ -90,7 +90,8 @@ namespace khieunaitocao
             madontogiac = dinhdanh.kyhieu_donvi + DateTime.Now.Year.ToString() + random.Next(1, 10000).ToString();
             txt_ma_togiac.Text = madontogiac;
             objTC = new tb_thongtintogiac();
-
+            grc_bidon.DataSource = objTC.tb_bidon_togiacs;
+            grv_bidon.BestFitColumns();
             grc_nhatky_guidon_togiac.DataSource = objTC.tb_nhatky_guidon_togiacs;
             grv_nhatky_guidon_tocao.BestFitColumns();
         }
@@ -163,8 +164,9 @@ namespace khieunaitocao
             forwarded = _list_thongtintocao.forward;
             ngaysua = _list_thongtintocao.ngaygio_sua + " " + dinhdanh.sohieu_cand + " " + DateTime.Now.ToString();
             objTC = _khieunaitocaoContext.tb_thongtintogiacs.Single(p => p.id_thongtintogiac == id_thongtintogiac);
-
+            grc_bidon.DataSource = objTC.tb_bidon_togiacs;
             grc_nhatky_guidon_togiac.DataSource = objTC.tb_nhatky_guidon_togiacs;
+            grv_bidon.RefreshData();
             grv_nhatky_guidon_tocao.RefreshData();
         }
 
@@ -397,10 +399,37 @@ namespace khieunaitocao
             if (date_ngay_ketthuc.EditValue != null)
             {
                 Re_sua = false;
-                //Re_xoa = false;
+                Re_xoa = true;
                 XtraMessageBox.Show("Không thể sửa xóa khi đã kết thúc");
             }
         }
 
+        private void txt_songay_giaiquyet_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_songay_giaiquyet.Text) && date_tungay_giaiquyet.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_giaiquyet.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_giaiquyet.EditValue;
+                date_denngay_giaiquyet.EditValue = dateTime.AddDays(int.Parse(txt_songay_giaiquyet.Text));
+            }
+        }
+
+        private void date_tungay_giaiquyet_EditValueChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txt_songay_giaiquyet.Text) && date_tungay_giaiquyet.EditValue != null)
+            {
+                date_denngay_giaiquyet.EditValue = date_tungay_giaiquyet.EditValue;
+                DateTime dateTime = (DateTime)date_tungay_giaiquyet.EditValue;
+                date_denngay_giaiquyet.EditValue = dateTime.AddDays(int.Parse(txt_songay_giaiquyet.Text));
+            }
+        }
+
+        private void btn_xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
+                 DialogResult.Yes)
+                return;
+            grv_bidon.DeleteSelectedRows();
+        }
     }
 }

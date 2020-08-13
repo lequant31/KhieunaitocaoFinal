@@ -199,6 +199,7 @@
             this.grv_quanlydontogiac.OptionsView.ShowFooter = true;
             this.grv_quanlydontogiac.OptionsView.ShowGroupPanelColumnsAsSingleRow = true;
             this.grv_quanlydontogiac.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grv_quanlydonthukhieunai_CustomDrawRowIndicator);
+            this.grv_quanlydontogiac.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grv_quanlydontogiac_RowStyle);
             this.grv_quanlydontogiac.CustomUnboundColumnData += new DevExpress.XtraGrid.Views.Base.CustomColumnDataEventHandler(this.grv_quanlydontogiac_CustomUnboundColumnData);
             // 
             // gridBand9
@@ -216,7 +217,7 @@
             // gridColumn43
             // 
             this.gridColumn43.Caption = "Kết thúc đơn";
-            this.gridColumn43.FieldName = "ketthucdonthu";
+            this.gridColumn43.FieldName = "ketthucdon";
             this.gridColumn43.Name = "gridColumn43";
             this.gridColumn43.OptionsColumn.AllowEdit = false;
             this.gridColumn43.Visible = true;

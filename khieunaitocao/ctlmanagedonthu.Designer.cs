@@ -184,7 +184,6 @@
             this.grc_quanlydonthukhieunai.TabIndex = 4;
             this.grc_quanlydonthukhieunai.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grv_quanlydonthukhieunai});
-            this.grc_quanlydonthukhieunai.DoubleClick += new System.EventHandler(this.grv_quanlydonthukhieunai_DoubleClick);
             // 
             // grv_quanlydonthukhieunai
             // 

@@ -1581,7 +1581,7 @@
             this.layoutControlItem29.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem29.Name = "layoutControlItem29";
             this.layoutControlItem29.Size = new System.Drawing.Size(267, 24);
-            this.layoutControlItem29.Text = "Mã đơn khiếu nại";
+            this.layoutControlItem29.Text = "Mã đơn kKNPA";
             this.layoutControlItem29.TextSize = new System.Drawing.Size(101, 13);
             // 
             // emptySpaceItem2
@@ -1898,15 +1898,19 @@
             this.date_tungay_kehoach_xacminh.Size = new System.Drawing.Size(120, 20);
             this.date_tungay_kehoach_xacminh.StyleController = this.layoutControl12;
             this.date_tungay_kehoach_xacminh.TabIndex = 46;
+            this.date_tungay_kehoach_xacminh.EditValueChanged += new System.EventHandler(this.date_tungay_kehoach_xacminh_EditValueChanged);
             // 
             // txt_songay_kehoach_xacminh
             // 
             this.txt_songay_kehoach_xacminh.Location = new System.Drawing.Point(127, 157);
             this.txt_songay_kehoach_xacminh.MenuManager = this.barManager1;
             this.txt_songay_kehoach_xacminh.Name = "txt_songay_kehoach_xacminh";
+            this.txt_songay_kehoach_xacminh.Properties.Mask.EditMask = "n0";
+            this.txt_songay_kehoach_xacminh.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric;
             this.txt_songay_kehoach_xacminh.Size = new System.Drawing.Size(120, 20);
             this.txt_songay_kehoach_xacminh.StyleController = this.layoutControl12;
             this.txt_songay_kehoach_xacminh.TabIndex = 45;
+            this.txt_songay_kehoach_xacminh.EditValueChanged += new System.EventHandler(this.txt_songay_kehoach_xacminh_EditValueChanged);
             // 
             // txt_nguoiky_kehoach_xacminh
             // 
